@@ -1,0 +1,10 @@
+= simple_form_for(@token) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :status
+    = f.input :comment
+    = f.association :user
+
+  .form-actions
+    = f.button :submit

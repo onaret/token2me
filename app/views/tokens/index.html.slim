@@ -1,0 +1,25 @@
+h1 Listing tokens
+
+table
+  thead
+    tr
+      th Status
+      th Comment
+      th User
+      th
+      th
+      th
+
+  tbody
+    - @tokens.each do |token|
+      tr
+        td = token.status
+        td = token.comment
+        td = token.user
+        td = link_to 'Show', token
+        td = link_to 'Edit', edit_token_path(token)
+        td = link_to 'Destroy', token, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Token', new_token_path

@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Status:
+  = @token.status
+p
+  strong Comment:
+  = @token.comment
+p
+  strong User:
+  = @token.user
+
+= link_to 'Edit', edit_token_path(@token)
+'|
+= link_to 'Back', tokens_path
