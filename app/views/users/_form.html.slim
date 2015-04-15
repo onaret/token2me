@@ -1,9 +1,9 @@
-= simple_form_for(@token) do |f|
+= simple_form_for(@user) do |f|
   = f.error_notification
 
   .form-inputs
-    = f.input :status
-    = f.input :comment
+    = f.input :team
+    = f.input :name
 
   .form-actions
     = f.button :submit

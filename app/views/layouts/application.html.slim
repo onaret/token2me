@@ -9,8 +9,8 @@ body class='container'
   user_nav
     flash
       -if flash[:notice]
-        p class="alert alert-success" =flash[:notice] || =notice
+        p class="alert alert-success" =flash[:notice]
       -if flash[:alert]
-        p class="alert alert-danger" =flash[:alert] |rails g devise| =alert
+        p class="alert alert-danger" =flash[:alert]
 
   == yield
