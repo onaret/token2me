@@ -1,0 +1,16 @@
+html
+head
+  title Token2Me
+  = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = csrf_meta_tags
+
+body class='container'
+  user_nav
+    flash
+      -if flash[:notice]
+        p class="alert alert-success" =flash[:notice] || =notice
+      -if flash[:alert]
+        p class="alert alert-danger" =flash[:alert] |rails g devise| =alert
+
+  == yield
