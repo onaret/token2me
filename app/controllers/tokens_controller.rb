@@ -4,7 +4,8 @@ class TokensController < ApplicationController
   # GET /tokens
   # GET /tokens.json
   def index
-    @tokens = Token.all
+    @tokens = Token.all.order(created_at: :desc)
+    @last_token_status = Token.all.last.status
   end
 
   # GET /tokens/1
@@ -24,8 +25,8 @@ class TokensController < ApplicationController
   # POST /tokens
   # POST /tokens.json
   def create
-    @token = Token.new(token_params)
-
+    @token = Token.build_token(token_params)
+    @token.user = User.all.first
     respond_to do |format|
       if @token.save
         format.html { redirect_to @token, notice: 'Token was successfully created.' }
@@ -41,6 +42,7 @@ class TokensController < ApplicationController
   # PATCH/PUT /tokens/1.json
   def update
     respond_to do |format|
+      @token.update(user: User.all.first)
       if @token.update(token_params)
         format.html { redirect_to @token, notice: 'Token was successfully updated.' }
         format.json { render :show, status: :ok, location: @token }
@@ -59,6 +61,13 @@ class TokensController < ApplicationController
       format.html { redirect_to tokens_url, notice: 'Token was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def release_token
+    Token.release_token
+    @tokens = Token.all.order(created_at: :desc)
+    @last_token_status = Token.all.last.status
+    redirect_to action: "index"
   end
 
   private

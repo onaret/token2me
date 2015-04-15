@@ -6,20 +6,22 @@ table class='table'
       th Status
       th Comment
       th User
-      th
-      th
-      th
+      th Team
+      th Date asked
+      th Date released
 
   tbody
     - @tokens.each do |token|
       tr
         td = token.status
         td = token.comment
-        td = token.user
-        td = link_to 'Show', token
-        td = link_to 'Edit', edit_token_path(token)
-        td = link_to 'Destroy', token, data: {:confirm => 'Are you sure?'}, :method => :delete
+        td = token.user.name
+        td = token.user.team
+        td = token.created_at
+        td = token.updated_at
 
 br
 
 = link_to 'Ask Token', new_token_path
+-if @token_last_status != :archived
+  = link_to 'Release Token', release_token_path

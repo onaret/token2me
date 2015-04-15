@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
 
+  root to: "tokens#index"
   resources :messages
   resources :tokens
   resources :users
   devise_for :users
-  root to: "tokens#index"
+
+  get 'release_token' => 'tokens#release_token'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

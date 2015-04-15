@@ -2,8 +2,8 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :team
     = f.input :name
+    = f.input :team, collection: User.teams.keys
 
   .form-actions
-    = f.button :submit
+    = f.button :submit "Get Token"
