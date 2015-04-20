@@ -1,0 +1,9 @@
+.container class="col-sm-6 col-sm-offset-3"	 class="starter-template"
+	h1 Welcome to Token2Me?
+    p class="lead" Please sign in
+
+    .col-sm-4
+		= simple_form_for :signin, {url: session_login_path} do |f|
+			=f.input :name
+			=f.input :password
+			=f.button :submit, "Connect to token2me"

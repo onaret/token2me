@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
 
-  root to: "tokens#index"
+  root to: "session#new"
+  post 'session/login'
+
+  get 'session/logout'
+
+  get 'session/new'
+
   resources :messages
   resources :tokens
   resources :users
-  devise_for :users
 
   get 'release_token' => 'tokens#release_token'
 
