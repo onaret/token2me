@@ -1,17 +1,25 @@
+require 'net/ldap'
+
 class SessionController < ApplicationController
+
+  def new
+    if current_user
+      redirect_to tokens_path
+    end
+  end
   
   def login
     host = 'ldap.axway.int'
     port =  389
     path = "ou=Employees,dc=axway,dc=int"
-    user, psw = "#{params[:signin][:name]}@axway.com", params[:signin][:password]
+    ident, psw = "#{params[:name]}@axway.com", params[:password]
 
     ldap = Net::LDAP.new    :host => host,
           :port => "389", 
           :base => path,
           :auth => {
             :method => :simple,
-            :username => user,
+            :username => ident,
             :password => psw 
           }
 
@@ -23,23 +31,24 @@ class SessionController < ApplicationController
     # Execute search
     #ldap.search(:filter => search_filter, :attributes => result_attrs, :return_result => false) do |item| 
     #   username = item.sAMAccountName.first 
-        username = user #TODELETE
-        user = User.find_or_create_by(name:  user)
+        user = User.where(name: ident)
     #    notice = "Connected as #{username}: #{item.displayName.first} (#{item.mail.first})."
-        session[:user_id] = user.id
+        if user.empty?
+          user = User.create(name: ident)
+          session[:user_id] = user.id
+          redirect_to edit_user_path(current_user)
+        else
+          session[:user_id] = user.id
+          redirect_to root_path, notice: notice
+        end
+
     #end
 
-    redirect_to root_path, notice: notice
   end
 
   def logout
     session[:user_id] = nil
-    redirect_to root_url, :notice => "Logged out!"
+    redirect_to root_path, :notice => "Logged out!"
   end
 
-  def new
-    if current_user
-      redirect_to tokens_path
-    end
-  end
 end

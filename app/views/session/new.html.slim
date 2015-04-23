@@ -1,9 +1,9 @@
-.container class="col-sm-6 col-sm-offset-3"	 class="starter-template"
+.container class="col-sm-8 col-sm-offset-4"	 class="starter-template"
 	h1 Welcome to Token2Me?
     p class="lead" Please sign in
 
-    .col-sm-4
-		= simple_form_for :signin, {url: session_login_path} do |f|
-			=f.input :name
-			=f.input :password
-			=f.button :submit, "Connect to token2me"
+    .col-sm-8
+		= bootstrap_form_tag layout: :horizontal do |f|
+			= f.text_field :name, label: 'Identification'
+			= f.password_field :password
+			= f.submit "Connect to token2me", class: 'btn btn-primary', formaction: session_login_path, formmethod: 'post'

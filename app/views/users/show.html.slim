@@ -1,11 +1,11 @@
 p#notice = notice
 
 p
-  strong Content:
-  = @user.content
+  strong Name:
+  = @user.name
 p
-  strong User:
-  = @user.user
+  strong Team:
+  = @user.team
 
 = link_to 'Edit', edit_user_path(@user)
 '|

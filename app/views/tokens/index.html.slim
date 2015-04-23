@@ -11,17 +11,30 @@ table class='table col-sm-6'
       th Date released
 
   tbody
-    - @tokens.each do |token|
+    - if @tokens.first.archived?
       tr
-        td = token.status
+        td class="token-status-free" Free 
+        td
+        td
+        td
+        td
+        td
+    - @tokens.each do |token|
+      - user_presenter = UserPresenter.new(token.user, self)
+      - token_presenter = TokenPresenter.new(token, self)
+      tr
+        = token_presenter.status(:td)
         td = token.comment
         td = token.user.name
-        td = token.user.team
-        td = token.created_at
-        td = token.updated_at
+        = user_presenter.team(:td)
+        = token_presenter.created_at(:td)
+        = token_presenter.updated_at(:td)
 
 br
 
-= link_to 'Ask Token', new_token_path
--if @token_last_status != :archived
-  = link_to 'Release Token', release_token_path
+= link_to 'Ask Token', new_token_path, class: 'btn btn-primary blanck-text'
+-unless @tokens.first.archived?
+  -if current_user.team != Token.active
+    = link_to 'Release Token', release_token_path, class: 'btn btn-primary', data: {:confirm => 'Your team does not have the token, are you sure you want to release it?'}
+  -else
+    = link_to 'Release Token', release_token_path, class: 'btn btn-primary blanck-text'

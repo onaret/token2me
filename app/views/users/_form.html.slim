@@ -1,9 +1,5 @@
-= simple_form_for(@user) do |f|
-  = f.error_notification
+= bootstrap_form_for(@user, layout: :horizontal, label_col: "col-sm-4", control_col: "col-sm-4") do |f|
+    = f.select :team, User.teams.keys, label: "Select your team"
 
-  .form-inputs
-    = f.input :name
-    = f.input :team, collection: User.teams.keys
-
-  .form-actions
-    = f.button :submit
+    = f.form_group
+    	= f.submit

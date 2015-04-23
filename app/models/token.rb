@@ -35,4 +35,8 @@ class Token < ActiveRecord::Base
     Token.all.last.status
   end
 
+  def self.active
+    Token.where(status: 1)
+  end
+
 end

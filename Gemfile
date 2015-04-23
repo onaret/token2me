@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'bootstrap-sass'
 
+gem 'bootstrap_form'
+
 gem 'slim-rails'
 
 gem 'slim'
@@ -9,6 +11,8 @@ gem 'slim'
 gem 'simple_form'
 
 gem 'rdiscount'
+
+gem 'net-ldap', '~> 0.11'
 
 gem 'better_errors'
 

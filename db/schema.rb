@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417165700) do
+ActiveRecord::Schema.define(version: 20150423212939) do
 
   create_table "messages", force: :cascade do |t|
     t.string   "content"
@@ -33,9 +33,9 @@ ActiveRecord::Schema.define(version: 20150417165700) do
   add_index "tokens", ["user_id"], name: "index_tokens_on_user_id"
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "team"
+    t.string  "name"
+    t.string  "email"
+    t.integer "team"
   end
 
 end
