@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
 
   root to: "session#new"
+
+  resources :tokens, path: '/tokens/:access_type', only: [:index, :new, :create, :destroy], as: 'ui_token', :access_type => "ui"
+  resources :tokens, path: '/tokens/:access_type', only: [:index, :new, :create, :destroy], as: 'server_token', :access_type => "server"
+
   post 'session/login'
 
   get 'session/logout'
 
   get 'session/new'
 
-  resources :messages
-  resources :tokens
-  resources :users
+  #  resources :messages
+  resources :users, only: [:show, :new, :create, :update]
 
   get 'release_token' => 'tokens#release_token'
 

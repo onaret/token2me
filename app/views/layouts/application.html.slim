@@ -30,6 +30,8 @@ html
               a href="#contact" Contact  
     
     .container
+      -if current_user
+        p Welcome #{current_user.name} ( #{current_user.team} )
       flash
         -if flash[:notice]
           p class="alert alert-success" =flash[:notice]

@@ -1,0 +1,908 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"asset",
+				"assert_not"
+			],
+			[
+				"pos",
+				"postll"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"post",
+				"post"
+			],
+			[
+				"pass",
+				"password_confirm"
+			],
+			[
+				"set",
+				"set_form_authenticity_token"
+			],
+			[
+				"pre",
+				"precompile"
+			],
+			[
+				"p",
+				"push"
+			],
+			[
+				"Member",
+				"MemberPost"
+			],
+			[
+				"rail",
+				"rails_env"
+			],
+			[
+				"deplo",
+				"deploy_to"
+			],
+			[
+				"upd",
+				"updated"
+			],
+			[
+				"repl",
+				"reply_params"
+			],
+			[
+				"genre",
+				"genre_id"
+			],
+			[
+				"dow",
+				"downcase"
+			],
+			[
+				"if",
+				"if	if … end"
+			],
+			[
+				"to",
+				"toggel_featured"
+			],
+			[
+				"ca",
+				"category"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 252.0,
+		"last_filter": "preview",
+		"selected_items":
+		[
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"coffee",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"pack ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pakc ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pac ins",
+				"Package Control: Install Package"
+			],
+			[
+				"java",
+				"Set Syntax: Java"
+			],
+			[
+				"pack re",
+				"Package Control: Remove Package"
+			],
+			[
+				"git diff",
+				"Git: Diff All Files"
+			],
+			[
+				"slim",
+				"Set Syntax: Ruby Slim"
+			],
+			[
+				"pack con ins",
+				"Package Control: Install Package"
+			],
+			[
+				"rails",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				"pac con ins",
+				"Package Control: Install Package"
+			],
+			[
+				"mark",
+				"Markdown Preview: Save to HTML"
+			],
+			[
+				"ma",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"markd",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"pac in",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"PAc",
+				"Package Control: Install Package"
+			],
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"lorem",
+				"LoremIpsum: (200) stick shake"
+			],
+			[
+				"ru",
+				"Set Syntax: Ruby on Rails"
+			],
+			[
+				" con re",
+				"Package Control: Remove Package"
+			],
+			[
+				"Packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package C",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package",
+				"Package Control: Disable Package"
+			],
+			[
+				"Pack",
+				"Package Control: List Packages"
+			],
+			[
+				"Package User",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"git diff ",
+				"Git: Diff Staged Files"
+			],
+			[
+				"yml",
+				"Set Syntax: YAML"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"lo",
+				"LoremIpsum: (200) stick shake"
+			],
+			[
+				"lore",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"comm",
+				"Toggle Comment"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript (Rails)"
+			],
+			[
+				"packa con trmo",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack remo",
+				"Package Control: Remove Repository"
+			],
+			[
+				"package insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pack con ",
+				"Package Control: Install Package"
+			],
+			[
+				"inden",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"Inde",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"space",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"snippet:ru",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"snipper: ",
+				"Snippet: form_for radio_box"
+			],
+			[
+				"snippet: rails",
+				"Snippet: RAILS_DEFAULT_LOGGER.debug"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 580.0
+	},
+	"console":
+	{
+		"height": 156.0,
+		"history":
+		[
+			"pwd",
+			"sl",
+			"ls",
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/zod/Workspace/rails/token2me",
+		"/home/zod/Dropbox/techie-note/linux",
+		"/home/zod/Dropbox/techie-note/other",
+		"/home/zod/Dropbox/techie-note/rails",
+		"/home/zod/Dropbox/techie-note/ruby",
+		"/home/zod/Dropbox/techie-note/shell",
+		"/home/zod/Dropbox/techie-note/web-design"
+	],
+	"file_history":
+	[
+		"/home/zod/Dropbox/techie-note/shell/shell-ninja.md",
+		"/var/log/dmesg.0",
+		"/var/log/dmesg",
+		"/var/log/faillog",
+		"/var/log/kern.log",
+		"/var/log/kern.log.1",
+		"/home/zod/Workspace/rails/token2me/app/assets/stylesheets/application.css.scss",
+		"/home/zod/Workspace/rails/token2me/app/views/tokens/index.json.jbuilder",
+		"/home/zod/Dropbox/techie-note/rails/rails-generate.md",
+		"/home/zod/Dropbox/techie-note/rails/assests.md",
+		"/home/zod/Dropbox/techie-note/rails/install-rails.md",
+		"/home/zod/Dropbox/techie-note/rails/link.md",
+		"/home/zod/Dropbox/techie-note/rails/console.md",
+		"/home/zod/Dropbox/techie-note/rails/env.md",
+		"/home/zod/Dropbox/techie-note/rails/model.md",
+		"/home/zod/Dropbox/techie-note/rails/routes.md",
+		"/home/zod/Dropbox/techie-note/rails/rails-deployement.md",
+		"/home/zod/Workspace/rails/token2me/app/presenters/token_presenter.rb",
+		"/home/zod/Workspace/rails/token2me/app/presenters/application_presenter.rb",
+		"/home/zod/Workspace/rails/token2me/app/assets/stylesheets/tokens.scss",
+		"/home/zod/Workspace/rails/token2me/app/assets/javascripts/tokens.coffee",
+		"/home/zod/Workspace/rails/token2me/app/views/tokens/index.html.slim",
+		"/home/zod/Workspace/rails/token2me/token2me.sublime-project",
+		"/home/zod/Workspace/rails/token2me/app/models/token.rb",
+		"/home/zod/Dropbox/techie-note/rails/params.md",
+		"/home/zod/Dropbox/techie-note/linux/linux.md",
+		"/home/zod/Dropbox/techie-note/linux/mounting-ntfs.md",
+		"/home/zod/Dropbox/techie-note/other/vbox.md",
+		"/home/zod/Dropbox/techie-note/other/cryptage-ssh.md",
+		"/home/zod/Dropbox/techie-note/linux/UNIX tips.md",
+		"/home/zod/Dropbox/techie-note/rails/form.md",
+		"/home/zod/Dropbox/techie-note/rails/bordel.md",
+		"/home/zod/Dropbox/techie-note/rails/findVSwhere.md",
+		"/home/zod/Workspace/rails/token2me/app/presenters/user_presenter.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/controllers/application_controller.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/test/controllers/application_controller_test.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/test/fixtures/users.yml",
+		"/home/zod/Workspace/rails/dux-bellorum/test/controllers/session_controller_test.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/controllers/session_controller.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/models/user.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/test/controllers/users_controller_test.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/controllers/posts_controller.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/config/routes.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/test/models/user_test.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/test/controllers/posts_controller_test.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/test/controllers/replies_controller_test.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/test/models/post_test.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/test/models/reply_test.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/Gemfile",
+		"/home/zod/Workspace/rails/dux-bellorum/test/fixtures/posts.yml",
+		"/home/zod/Workspace/rails/snippets/test_particular_input_with_routes",
+		"/home/zod/Workspace/rails/snippets/stupid test",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/posts/set_post.html.slim",
+		"/home/zod/Workspace/techie-note/rails/params.md",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/posts/index.html.slim",
+		"/home/zod/Workspace/rails/dux-bellorum/app/presenters/post_presenter.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/presenters/application_presenter.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/presenters/user_presenter.rb",
+		"/home/zod/Workspace/techie-note/rails/best-articles.md",
+		"/home/zod/Workspace/rails/dux-bellorum/app/models/post.rb",
+		"/home/zod/Workspace/techie-note/web-design/css.md",
+		"/home/zod/Dropbox/projet clem",
+		"/home/zod/Workspace/rails/dux-bellorum/app/assets/stylesheets/application.css.scss",
+		"/home/zod/Workspace/rails/dux-bellorum/.gitignore",
+		"/home/zod/Workspace/rails/snippets/with strock_form.slim",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/posts/_post.html.slim",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/posts/show.html.slim",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/posts/edit.html.slim",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/replies/_reply.html.slim",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/replies/edit.html.slim",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/users/edit.html.slim",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/users/show.html.slim",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/session/new.html.slim",
+		"/home/zod/Workspace/rails/snippets/with_simple_form2",
+		"/home/zod/Workspace/rails/dux-bellorum/vendor/bundle/ruby/2.2.0/gems/slim-3.0.3/doc/jp/include.md",
+		"/home/zod/Workspace/rails/dux-bellorum/config/initializers/simple_form.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/layouts/application.html.slim",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/users/index.html.slim",
+		"/home/zod/Workspace/rails/dux-bellorum/app/assets/stylesheets/scaffolds.scss",
+		"/home/zod/Workspace/rails/dux-bellorum/vendor/bundle/ruby/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_scaffolding.scss",
+		"/home/zod/Workspace/rails/dux-bellorum/config/application.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/vendor/bundle/ruby/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_alerts.scss",
+		"/home/zod/Workspace/rails/dux-bellorum/config/thin/production.yml",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/session/with_simple_form",
+		"/home/zod/Workspace/rails/dux-bellorum/app/presenters/reply_presenter.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/controllers/users_controller.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/config/environments/development.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/helpers/users_helper.rb",
+		"/home/zod/Workspace/techie-note/ruby/class-and-instances.md",
+		"/home/zod/Workspace/rails/dux-bellorum/app/decorators/posts_decorator.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/decorators/post_decorator.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/posts/_post_row.html.slim",
+		"/home/zod/Workspace/rails/dux-bellorum/app/decorators/application_decorator.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/posts/.fuse_hidden0000472f00000004",
+		"/home/zod/Workspace/rails/dux-bellorum/test/decorators/posts_decorator_test.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/decorators/session_decorator.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/decorators/users_decorator.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/decorators/replies_decorator.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/helpers/replies_helper.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/test/fixtures/replies.yml",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/replies/_form.html.slim",
+		"/home/zod/Workspace/rails/dux-bellorum/app/models/reply.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/controllers/replies_controller.rb",
+		"/home/zod/Workspace/techie-note/rails/form.md",
+		"/home/zod/Workspace/UNIX tips",
+		"/home/zod/Workspace/scripts/backup.sh",
+		"/home/zod/Workspace/scripts/exclude-list",
+		"/home/zod/Workspace/scripts/exlude-list",
+		"/home/zod/Workspace/scripts/exlude-list.txt",
+		"/home/zod/Workspace/rails/dux-bellorum/app/assets/stylesheets/users.scss",
+		"/home/zod/Workspace/rails/dux-bellorum/db/migrate/20150411194838_add_role_to_users.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/db/migrate/20150412092502_add_status_to_posts.rb",
+		"/home/zod/Workspace/techie-note/rails/generating-scaffold.md",
+		"/home/zod/Workspace/rails/dux-bellorum/db/migrate/20150411194307_add_role_to_users.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/users/_form.html.slim",
+		"/home/zod/Workspace/rails/dux-bellorum/db/migrate/20150411161500_remove_password_from_users.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/db/migrate/20150411103309_add_password_salt_to_users.rb",
+		"/home/zod/Workspace/techie-note/rails/routes.md",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/users/new.html.slim",
+		"/home/zod/Workspace/rails/dux-bellorum/db/migrate/20150410210452_add_password_hash_to_users.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/app/views/index/index.html.slim",
+		"/home/zod/Workspace/techie-note/rails/techi-note_on_bordel.md",
+		"/home/zod/Workspace/techie-note/rails/install-rails.html",
+		"/home/zod/Workspace/rails/dux-bellorum/db/schema.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/db/migrate/20150410205909_add_password_hash_to_user.rb",
+		"/home/zod/Workspace/rails/dux-bellorum/config/database.yml",
+		"/home/zod/Workspace/techie-note/rails/install-rails.md",
+		"/home/zod/Workspace/techie-note/linux/mounting-ntfs.md"
+	],
+	"find":
+	{
+		"height": 45.0
+	},
+	"find_in_files":
+	{
+		"height": 282.0,
+		"where_history":
+		[
+			"/home/zod/Workspace/rails/dux-bellorum/test/",
+			"/home/zod/Workspace/rails/dux-bellorum/",
+			"/home/zod/Workspace/rails/dux-bellorum/vendor/bundle/ruby/2.2.0/gems/bootstrap-sass-3.3.4.1",
+			"/home/zod/Workspace/rails/dux-bellorum/app,/home/zod/Workspace/rails/dux-bellorum , vendor/*",
+			"/home/zod/Workspace/rails/dux-bellorum/app,/home/zod/Workspace/rails/dux-bellorum ,-vendor/*",
+			"/home/zod/Workspace/rails/dux-bellorum/app,/home/zod/Workspace/rails/dux-bellorum",
+			"/home/zod/Workspace/rails/dux-bellorum/app,/home/zod/Workspace/rails/dux-bellorum/test",
+			"/home/zod/Workspace/rails/dux-bellorum/test",
+			"/home/zod/Workspace/rails/dux-bellorum/",
+			"/home/zod/Workspace/rails/dux-bellorum/app",
+			"/home/zod/Workspace/rails/dux-bellorum",
+			"/home/zod/Workspace/rails/",
+			"/home/zod/Workspace/rails/le-transpondeur",
+			"/home/zod/Workspace/rails/stb-2/app",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ERROR",
+			"hash",
+			"token.user",
+			"WRONG",
+			"post",
+			"user",
+			"require 'simplecov'",
+			"require 'test_helper'",
+			"\"},",
+			"?),",
+			"@controller",
+			"controller",
+			"h.",
+			"simple_form",
+			"    ",
+			"simple",
+			"comments",
+			"lead",
+			"verdana",
+			"verdana,arial,helvetica,sans-serif",
+			"Helvetica Neue",
+			"Helvetica Neue\",Helvetica,Arial,sans-serif",
+			"font-size",
+			"=",
+			"action_ma",
+			"article",
+			"post",
+			"@",
+			"post",
+			"@view",
+			"vie",
+			"view",
+			"      ",
+			"/",
+			"\", \"",
+			"\",\"",
+			"/*\"",
+			"/*",
+			"desc",
+			"user",
+			"')\n",
+			"from",
+			"id",
+			"redirect_to",
+			"redirrect_to",
+			"current_user",
+			"reply_path",
+			"post",
+			" :user_id=> @post",
+			":user_id=> @post",
+			"=> ",
+			"user_id=>",
+			"user_id=",
+			" @",
+			"user_id=> ",
+			"user_id=>",
+			"post",
+			"user_id=> @",
+			"user_id=> ",
+			"user_id",
+			"user",
+			"replies",
+			", authenticity_token:",
+			", authenticity_token: ",
+			", authenticity_token: set_form_authenticity_token",
+			"set_form_authenticity_token",
+			"member",
+			"Member",
+			"member",
+			"Member",
+			"member",
+			"members",
+			"member",
+			"version",
+			"gem",
+			"gem ",
+			"Try: ",
+			" Try: ",
+			"Try:",
+			"3000",
+			"*\n",
+			"sprocket",
+			"'",
+			"-",
+			"\"\n",
+			"thin",
+			"#{:current}",
+			"\"",
+			"current_path",
+			"rails_env",
+			"error",
+			"errror",
+			"do",
+			"1",
+			"== ",
+			"Getting",
+			"\"",
+			"= ",
+			"\"",
+			"'",
+			"amaron",
+			"amaron_id",
+			"\"/",
+			"soup",
+			"/home/",
+			"categories",
+			"alias",
+			"\"",
+			"$1",
+			"Category",
+			"route.rb",
+			"route",
+			"fi",
+			"uid",
+			"0",
+			"Data"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"require 'simplecov'\nSimpleCov.start",
+			"require 'simplecov'\nrequire 'test_helper'",
+			"",
+			"	",
+			"user",
+			"User",
+			"user",
+			"amazon",
+			"amazon_id",
+			""
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 151.0
+	},
+	"output.find_results":
+	{
+		"height": 140.0
+	},
+	"output.git":
+	{
+		"height": 142.0
+	},
+	"pinned_build_system": "",
+	"project": "token2me.sublime-project",
+	"replace":
+	{
+		"height": 120.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"route",
+				"dux-bellorum/config/routes.rb"
+			],
+			[
+				"routes",
+				"dux-bellorum/config/routes.rb"
+			],
+			[
+				"session",
+				"dux-bellorum/app/controllers/session_controller.rb"
+			],
+			[
+				"postcontr",
+				"dux-bellorum/app/controllers/posts_controller.rb"
+			],
+			[
+				"post",
+				"dux-bellorum/app/models/post.rb"
+			],
+			[
+				"index",
+				"dux-bellorum/app/views/posts/index.html.slim"
+			],
+			[
+				"usercontr",
+				"dux-bellorum/app/controllers/users_controller.rb"
+			],
+			[
+				"usercon",
+				"dux-bellorum/app/controllers/users_controller.rb"
+			],
+			[
+				"user.r",
+				"dux-bellorum/app/models/user.rb"
+			],
+			[
+				"sessiocontro",
+				"dux-bellorum/app/controllers/session_controller.rb"
+			],
+			[
+				"gem",
+				"dux-bellorum/Gemfile"
+			],
+			[
+				"test_he",
+				"dux-bellorum/test/test_helper.rb"
+			],
+			[
+				".bas",
+				"~/.bashrc"
+			],
+			[
+				"bootstrapplication.rb",
+				"dux-bellorum/vendor/bundle/ruby/2.1.0/gems/bootstrap-sass-3.3.3/test/dummy_rails/config/application.rb"
+			],
+			[
+				"cap",
+				"dux-bellorum/Capfile"
+			],
+			[
+				"linux",
+				"techie-note/rails/linux"
+			],
+			[
+				"seed",
+				"dux-bellorum/db/seeds.rb"
+			],
+			[
+				"prod",
+				"dux-bellorum/config/deploy/production.rb"
+			],
+			[
+				"deplo",
+				"dux-bellorum/config/deploy.rb"
+			],
+			[
+				"proc",
+				"dux-bellorum/config/environments/production.rb"
+			],
+			[
+				"rake",
+				"dux-bellorum/Rakefile"
+			],
+			[
+				"ra",
+				"dux-bellorum/bin/rake"
+			],
+			[
+				"sche",
+				"dux-bellorum/db/schema.rb"
+			],
+			[
+				"form",
+				"dux-bellorum/app/views/replies/_form.html.slim"
+			],
+			[
+				"forml",
+				"dux-bellorum/app/views/member_posts/_form.html.slim"
+			],
+			[
+				"appl",
+				"stb-2/app/assets/stylesheets/application.css.scss"
+			],
+			[
+				"applic",
+				"stb-2/app/assets/stylesheets/application.css.scss"
+			],
+			[
+				"application.css",
+				"stb-2/app/assets/stylesheets/application.css.scss"
+			],
+			[
+				"application.html",
+				"stb-2/app/views/layouts/application.html.slim"
+			],
+			[
+				"le-",
+				"le-transpondeur/.gitignore"
+			],
+			[
+				"bookcon",
+				"app/controllers/books_controller.rb"
+			],
+			[
+				"book",
+				"app/models/book.rb"
+			],
+			[
+				"bookinde",
+				"app/views/books/index.html.slim"
+			],
+			[
+				"genre",
+				"app/models/genre.rb"
+			],
+			[
+				"",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"layou",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"llayout",
+				"~/Workspace/rails/stb-1/app/views/layouts/application.html.slim"
+			],
+			[
+				"layout",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"appli",
+				"app/views/layouts/application.html.erb"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 600.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Workspace/rails/dux-bellorum/dux-bellorum.sublime-project"
+			],
+			[
+				"st",
+				"~/Workspace/rails/stb-2/stb2.sublime-project"
+			]
+		],
+		"width": 456.0
+	},
+	"select_symbol":
+	{
+		"height": 480.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"# インクルード"
+			]
+		],
+		"width": 1140.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"_vintageous_last_buffer_search": "redirect_to",
+		"_vintageous_last_buffer_search_command": "vi_octothorp",
+		"_vintageous_last_char_search_command": "vi_big_t",
+		"_vintageous_last_character_search": "h",
+		"_vintageous_reset_during_init": true,
+		"vintage":
+		{
+			"_cmdline_cd": "/home/zod/Workspace/scripts"
+		}
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 354.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

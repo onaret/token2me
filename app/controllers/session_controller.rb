@@ -4,7 +4,7 @@ class SessionController < ApplicationController
 
   def new
     if current_user
-      redirect_to tokens_path
+      redirect_to server_token_index_path
     end
   end
   
@@ -31,15 +31,15 @@ class SessionController < ApplicationController
     # Execute search
     #ldap.search(:filter => search_filter, :attributes => result_attrs, :return_result => false) do |item| 
     #   username = item.sAMAccountName.first 
-        user = User.where(name: ident)
+        user = User.find_by(name: params[:name])
     #    notice = "Connected as #{username}: #{item.displayName.first} (#{item.mail.first})."
-        if user.empty?
-          user = User.create(name: ident)
-          session[:user_id] = user.id
-          redirect_to edit_user_path(current_user)
-        else
+        if user
           session[:user_id] = user.id
           redirect_to root_path, notice: notice
+        else
+          user = User.create(name: params[:name])
+          session[:user_id] = user.id
+          redirect_to edit_user_path(current_user)
         end
 
     #end

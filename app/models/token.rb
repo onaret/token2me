@@ -2,6 +2,11 @@ class Token < ActiveRecord::Base
   belongs_to :user
   
   enum status: [ :free, :active, :queued, :archived  ]
+  enum access_type: [ :server, :ui ]
+
+  def self.free?
+    Token.all.last.archived?
+  end
 
   def self.build_token(token_params)
     token = Token.new(token_params)
@@ -19,7 +24,7 @@ class Token < ActiveRecord::Base
   end
 
   def self.release_token
-    active_token = Token.where(status: 1).last
+    active_token = Token.active
     if active_token
       active_token.status = :archived
       active_token.save
@@ -36,7 +41,7 @@ class Token < ActiveRecord::Base
   end
 
   def self.active
-    Token.where(status: 1)
+    Token.find_by(status: 1)
   end
 
 end

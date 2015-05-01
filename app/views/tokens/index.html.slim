@@ -1,4 +1,4 @@
-h1 Listing tokens
+h1 Token status
 
 table class='table col-sm-6'
   thead
@@ -7,11 +7,11 @@ table class='table col-sm-6'
       th Comment
       th User
       th Team
-      th Date asked
-      th Date released
+      th Asked
+      th Released
 
   tbody
-    - if @tokens.first.archived?
+    - if Token.free?
       tr
         td class="token-status-free" Free 
         td
@@ -32,9 +32,15 @@ table class='table col-sm-6'
 
 br
 
-= link_to 'Ask Token', new_token_path, class: 'btn btn-primary blanck-text'
--unless @tokens.first.archived?
-  -if current_user.team != Token.active
-    = link_to 'Release Token', release_token_path, class: 'btn btn-primary', data: {:confirm => 'Your team does not have the token, are you sure you want to release it?'}
+
+
+
+-if Token.free? 
+  = link_to 'Take Token', new_token_path, class: 'btn btn-primary blanck-text'
+  
+-else
+  -if current_user.team != Token.active.user.team
+    = link_to 'Ask Token', new_token_path, class: 'btn btn-primary blanck-text'
+    = link_to 'Free Token', release_token_path, class: 'btn btn-primary', data: {:confirm => 'Your team does not have the token, are you sure you can release it?'}
   -else
     = link_to 'Release Token', release_token_path, class: 'btn btn-primary blanck-text'

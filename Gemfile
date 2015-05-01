@@ -1,23 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'bootstrap-sass'
-
-gem 'bootstrap_form'
-
-gem 'slim-rails'
-
-gem 'slim'
-
-gem 'simple_form'
-
-gem 'rdiscount'
-
-gem 'net-ldap', '~> 0.11'
-
-gem 'better_errors'
-
-gem "binding_of_caller"
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
@@ -38,6 +20,23 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
+
+gem 'bootstrap-sass'
+
+gem 'bootstrap_form'
+
+gem 'slim-rails'
+
+gem 'slim'
+
+gem 'net-ldap', '~> 0.11'
+
+gem 'rdiscount'
+
+gem 'better_errors'
+
+gem "binding_of_caller"
+
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
