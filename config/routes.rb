@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   get 'release_token/:access_type' => 'tokens#release_token', as: 'release_token'
   get 'reset_token/:access_type' => 'tokens#reset_token', as: 'reset_token'
+  get 'cancel_request/:access_type' => 'tokens#cancel_request', as: 'cancel_request'
 
   #get 'reset_token/:access_type' => 'tokens#reset_token', as: 'reset_token'
 

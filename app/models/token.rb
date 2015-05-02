@@ -8,6 +8,8 @@ class Token < ActiveRecord::Base
 
   scope :of_access_type, -> (access_type) {where(access_type:  Token.access_types[access_type])}
   scope :of_status, -> (status) {where(status: Token.statuses[status])}
+  #  scope :active_token_for, -> (access_type) {find_by(access_type: Token.access_types[access_type], status: Token.statuses[:active])}
+
 #  scope :active_token_for, -> (access_type) {find_by(access_type: Token.access_types[access_type], status: Token.statuses[:active])}
 #  scope :active_token_for, -> (access_type) {where(access_type: Token.access_types[access_type], status: Token.statuses[:active]).first}
 
@@ -28,8 +30,8 @@ class Token < ActiveRecord::Base
   end
 
   def self.active_team(access_type)
-    unless Token.of_access_type(access_type).empty? 
-      Token.active_token_for(access_type).user.team 
+    unless of_access_type(access_type).empty? 
+      active_token_for(access_type).user.team 
     end
   end
 
@@ -44,11 +46,11 @@ class Token < ActiveRecord::Base
   end
 
   def self.reset_token(access_type)
-    Token.of_access_type(access_type).destroy_all
+    of_access_type(access_type).destroy_all
   end
 
   def self.get_next_status(access_type)
-    if Token.of_access_type(access_type).empty?
+    if of_access_type(access_type).empty?
       :active
     else
       last_status= last_token(access_type).status.to_sym
@@ -61,16 +63,23 @@ class Token < ActiveRecord::Base
   end
 
   def self.list(access_type)
-    Token.of_access_type(access_type).order(id: :desc)
+    of_access_type(access_type).order(id: :desc)
   end
   
   def self.last_token(access_type)
-    Token.of_access_type(access_type).last
+    of_access_type(access_type).last
+  end
+
+  def self.team_is_in_queued?(access_type, team)
+    !of_access_type(access_type).of_status(:queued).joins(:user).merge(User.where(team: User.teams[team])).empty?
+  end
+
+  def self.cancel_request(access_type, team)
+    of_access_type(access_type).of_status(:queued).joins(:user).merge(User.where(team: User.teams[team])).destroy_all
   end
 
   def self.active_token_for(access_type)
-    Token.find_by(access_type: Token.access_types[access_type], status: Token.statuses[:active])
+    find_by(access_type: Token.access_types[access_type], status: Token.statuses[:active])
   end
-
 
 end

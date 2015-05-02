@@ -6,11 +6,11 @@ class TokensController < ApplicationController
     @tokens = Token.list(params[:access_type])
 
     if Token.free? @tokens
-      flash[:notice] = "Token is free"
+      flash[:notice] = "The token is free"
     elsif Token.active_team(params[:access_type]) == current_user.team
       flash[:notice] = "<strong>Your team have the token</strong>".html_safe
     else
-      flash[:notice] = "Token is is use"
+      flash[:notice] = "The token is in use"
     end
   end
 
@@ -26,7 +26,7 @@ class TokensController < ApplicationController
     @token.user = current_user
     respond_to do |format|
       if @token.save
-        format.html { redirect_to tokens_path(params[:access_type]), notice: 'You have the ' + params[:access_type] + ' token.' }
+        format.html { redirect_to tokens_path(params[:access_type]) }
         format.json { render :show, status: :created, location: tokens_path(params[:access_type]) }
       else
         format.html { render :new }
@@ -42,6 +42,11 @@ class TokensController < ApplicationController
 
   def reset_token
     Token.reset_token params[:access_type]
+    redirect_to action: "index"
+  end
+
+  def cancel_request
+    Token.cancel_request params[:access_type], current_user.team
     redirect_to action: "index"
   end
   

@@ -1,23 +1,11 @@
 class UserPresenter < ApplicationPresenter
 
   def team(tag)
-    content_tag(tag, user.team.capitalize, class: "team-"+user.team)
+    if user.team == current_user.team
+      content_tag(tag, user.team.capitalize, class: "team-"+user.team + " bold")
+    else
+      content_tag(tag, user.team.capitalize, class: "team-"+user.team)
+    end
   end
-
-=begin
-    case user.team
-      when user.silver?
-        content_tag(:span, "Hello world!", class: ["strong", "highlight"])
-      when user.black?
-
-      when user.pink?
-
-      when user.red?
-
-      when user.orange?
-
-      else
-=end
-
 
 end

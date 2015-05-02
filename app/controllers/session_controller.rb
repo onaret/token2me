@@ -40,7 +40,7 @@ class SessionController < ApplicationController
         if user.team
           redirect_to root_path
         else
-          redirect_to edit_user_path(current_user), notice: "Set you team"
+          redirect_to edit_user_path(user), notice: "Set you team"
         end
 
     #end
