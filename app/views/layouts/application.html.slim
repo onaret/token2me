@@ -4,7 +4,7 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
 
-    title Token2Me
+    title TokenTracker
     meta name="description" content="Tool to handle token request"
     meta name="author" content="onaret"
     link rel="icon" href="favicon.ico"
@@ -19,15 +19,16 @@ html
             span class="icon-bar"
             span class="icon-bar"
 
-          a class="navbar-brand" href="#" Token2Me
+          a class="navbar-brand" href="#" TokenTracker
         div id="navbar" class="collapse navbar-collapse"
           ul class="nav navbar-nav"
-            li class=(params[:access_type] == 'server' ? "active" : "" )
-              = link_to 'Server', tokens_path(access_type: :server)
-            li class=(params[:access_type] == 'ui' ? "active" : "" )
-              = link_to 'UI', tokens_path(access_type: :ui)
-            li 
-              a href="#contact" Contact  
+            -if current_user && current_user.team
+              li class=(params[:access_type] == 'server' ? "active" : "" )
+                = link_to 'Server', tokens_path(access_type: :server)
+              li class=(params[:access_type] == 'ui' ? "active" : "" )
+                = link_to 'UI', tokens_path(access_type: :ui)
+              li 
+                = link_to 'Reset', reset_token_path(params[:access_type]),  data: {:confirm => 'Erase all token history?'}
     
     .container
       -if current_user

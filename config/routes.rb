@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :new, :create, :edit, :update]
 
   get 'release_token/:access_type' => 'tokens#release_token', as: 'release_token'
+  get 'reset_token/:access_type' => 'tokens#reset_token', as: 'reset_token'
+
+  #get 'reset_token/:access_type' => 'tokens#reset_token', as: 'reset_token'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

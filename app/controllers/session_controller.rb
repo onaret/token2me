@@ -33,15 +33,14 @@ class SessionController < ApplicationController
     # Execute search
     #ldap.search(:filter => search_filter, :attributes => result_attrs, :return_result => false) do |item| 
     #   username = item.sAMAccountName.first 
-        user = User.find_by(name: params[:name])
     #    notice = "Connected as #{username}: #{item.displayName.first} (#{item.mail.first})."
-        if user
-          session[:user_id] = user.id
-          redirect_to root_path, notice: notice
+        user = User.where(name: params[:name]).first_or_create
+        session[:user_id] = user.id
+
+        if user.team
+          redirect_to root_path
         else
-          user = User.create(name: params[:name])
-          session[:user_id] = user.id
-          redirect_to edit_user_path(current_user)
+          redirect_to edit_user_path(current_user), notice: "Set you team"
         end
 
     #end
@@ -50,7 +49,7 @@ class SessionController < ApplicationController
 
   def logout
     session[:user_id] = nil
-    redirect_to root_path, :notice => "Logged out!"
+    redirect_to root_path, notice: "Logged out!"
   end
 
 end

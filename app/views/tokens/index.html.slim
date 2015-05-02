@@ -39,7 +39,7 @@ br
   = link_to 'Take Token', new_token_path(params[:access_type]), class: 'btn btn-primary blanck-text'
   
 -else
-  -if current_user.team != Token.active(params[:access_type]).user.team
+  -if current_user.team != Token.active_token_for(params[:access_type]).user.team
     = link_to 'Ask Token', new_token_path(params[:access_type]), class: 'btn btn-primary blanck-text'
     = link_to 'Free Token', release_token_path(params[:access_type]), class: 'btn btn-primary', data: {:confirm => 'Your team does not have the token, are you sure you can release it?'}
   -else

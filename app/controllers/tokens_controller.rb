@@ -40,6 +40,11 @@ class TokensController < ApplicationController
     redirect_to action: "index"
   end
 
+  def reset_token
+    Token.reset_token
+    redirect_to action: "index"
+  end
+  
   private
 
   # Never trust parameters from the scary internet, only allow the white list through.

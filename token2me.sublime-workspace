@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"token",
+				"token_type_empty"
+			],
+			[
+				"tok",
+				"token_list"
+			],
+			[
+				"las",
+				"last_token"
+			],
+			[
+				"last",
+				"last_status"
+			],
+			[
+				"ac",
+				"access_type"
+			],
+			[
+				"c",
+				"command"
+			],
+			[
 				"asset",
 				"assert_not"
 			],
@@ -79,6 +103,54 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/views/session/new.html.slim",
+			"settings":
+			{
+				"buffer_size": 391,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.slim",
+			"settings":
+			{
+				"buffer_size": 1722,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/tokens_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1504,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 2301,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/token.rb",
+			"settings":
+			{
+				"buffer_size": 1749,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/tokens/index.html.slim",
+			"settings":
+			{
+				"buffer_size": 1290,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -87,10 +159,18 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 252.0,
-		"last_filter": "preview",
+		"height": 480.0,
+		"last_filter": "bash",
 		"selected_items":
 		[
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
 			[
 				"preview",
 				"Markdown Preview: Preview in Browser"
@@ -156,10 +236,6 @@
 				"Markdown Preview: Preview in Browser"
 			],
 			[
-				"mar",
-				"Markdown Preview: Preview in Browser"
-			],
-			[
 				"pac in",
 				"Package Control: Install Package"
 			],
@@ -170,10 +246,6 @@
 			[
 				"PAc",
 				"Package Control: Install Package"
-			],
-			[
-				"bash",
-				"Set Syntax: Shell Script (Bash)"
 			],
 			[
 				"lorem",
@@ -292,7 +364,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 580.0
+		"width": 657.0
 	},
 	"console":
 	{
@@ -317,22 +389,68 @@
 	"expanded_folders":
 	[
 		"/home/zod/Workspace/rails/token2me",
+		"/home/zod/Workspace/rails/token2me/app",
+		"/home/zod/Workspace/rails/token2me/app/assets",
+		"/home/zod/Workspace/rails/token2me/app/assets/stylesheets",
+		"/home/zod/Workspace/rails/token2me/app/controllers",
+		"/home/zod/Workspace/rails/token2me/app/models",
+		"/home/zod/Workspace/rails/token2me/app/views",
+		"/home/zod/Workspace/rails/token2me/app/views/layouts",
+		"/home/zod/Workspace/rails/token2me/app/views/session",
+		"/home/zod/Workspace/rails/token2me/app/views/tokens",
+		"/home/zod/Workspace/rails/token2me/app/views/users",
+		"/home/zod/Workspace/rails/token2me/config",
+		"/home/zod/Workspace/rails/token2me/db",
+		"/home/zod/Workspace/rails/token2me/test",
+		"/home/zod/Workspace/rails/token2me/test/controllers",
+		"/home/zod/Workspace/rails/token2me/test/fixtures",
+		"/home/zod/Dropbox/techie-note",
 		"/home/zod/Dropbox/techie-note/linux",
-		"/home/zod/Dropbox/techie-note/other",
 		"/home/zod/Dropbox/techie-note/rails",
-		"/home/zod/Dropbox/techie-note/ruby",
-		"/home/zod/Dropbox/techie-note/shell",
-		"/home/zod/Dropbox/techie-note/web-design"
+		"/home/zod/Dropbox/techie-note/shell"
 	],
 	"file_history":
 	[
+		"/home/zod/Workspace/rails/token2me/app/controllers/tokens_controller.rb",
+		"/home/zod/Workspace/rails/token2me/app/models/token.rb",
+		"/home/zod/Workspace/rails/token2me/test/fixtures/users.yml",
+		"/home/zod/Workspace/rails/token2me/test/fixtures/tokens.yml",
+		"/home/zod/Workspace/rails/token2me/test/controllers/tokens_controller_test.rb",
+		"/home/zod/Workspace/rails/token2me/app/controllers/session_controller.rb",
+		"/home/zod/Workspace/rails/token2me/config/routes.rb",
+		"/home/zod/Workspace/rails/token2me/app/views/session/new.html.slim",
+		"/home/zod/Workspace/rails/token2me/app/controllers/application_controller.rb",
+		"/home/zod/Workspace/rails/token2me/app/views/layouts/application.html.slim",
+		"/home/zod/Workspace/rails/token2me/test/controllers/session_controller_test.rb",
+		"/home/zod/Workspace/rails/token2me/app/assets/stylesheets/application.css.scss",
+		"/home/zod/Workspace/rails/token2me/app/assets/stylesheets/scaffolds.scss",
+		"/home/zod/Workspace/rails/token2me/app/views/tokens/index.html.slim",
+		"/home/zod/Workspace/rails/token2me/db/schema.rb",
+		"/home/zod/Workspace/rails/token2me/test/controllers/users_controller_test.rb",
+		"/home/zod/Workspace/rails/token2me/test/controllers/messages_controller_test.rb",
+		"/home/zod/Workspace/rails/token2me/vendor/bundle/gems/coderay-1.1.0/lib/coderay/tokens.rb",
+		"/home/zod/Workspace/scripts/musicCleaner.sh",
+		"/home/zod/Workspace/rails/token2me/Gemfile",
+		"/home/zod/Workspace/rails/token2me/app/views/tokens/_form.html.slim",
+		"/home/zod/Workspace/scripts/printarray.awk",
+		"/home/zod/Dropbox/techie-note/shell/quotes.md",
+		"/home/zod/.profile",
+		"/home/zod/.zshrc",
+		"/home/zod/Dropbox/techie-note/shell/shell-inside.md",
+		"/etc/default/grub",
+		"/home/zod/Dropbox/techie-note/rails/slim.md",
+		"/home/zod/Workspace/rails/token2me/vendor/bundle/gems/actionpack-4.2.1/lib/action_controller/metal.rb",
+		"/home/zod/Workspace/rails/token2me/app/views/tokens/new.html.slim",
+		"/home/zod/Workspace/rails/token2me/db/migrate/20150501174425_rename_column_type_to_access_type_in_tokens.rb",
+		"/home/zod/Dropbox/techie-note/rails/db.md",
+		"/home/zod/Dropbox/techie-note/ruby/string-split.md",
+		"/home/zod/Dropbox/techie-note/rails/flash.md",
 		"/home/zod/Dropbox/techie-note/shell/shell-ninja.md",
 		"/var/log/dmesg.0",
 		"/var/log/dmesg",
 		"/var/log/faillog",
 		"/var/log/kern.log",
 		"/var/log/kern.log.1",
-		"/home/zod/Workspace/rails/token2me/app/assets/stylesheets/application.css.scss",
 		"/home/zod/Workspace/rails/token2me/app/views/tokens/index.json.jbuilder",
 		"/home/zod/Dropbox/techie-note/rails/rails-generate.md",
 		"/home/zod/Dropbox/techie-note/rails/assests.md",
@@ -347,9 +465,7 @@
 		"/home/zod/Workspace/rails/token2me/app/presenters/application_presenter.rb",
 		"/home/zod/Workspace/rails/token2me/app/assets/stylesheets/tokens.scss",
 		"/home/zod/Workspace/rails/token2me/app/assets/javascripts/tokens.coffee",
-		"/home/zod/Workspace/rails/token2me/app/views/tokens/index.html.slim",
 		"/home/zod/Workspace/rails/token2me/token2me.sublime-project",
-		"/home/zod/Workspace/rails/token2me/app/models/token.rb",
 		"/home/zod/Dropbox/techie-note/rails/params.md",
 		"/home/zod/Dropbox/techie-note/linux/linux.md",
 		"/home/zod/Dropbox/techie-note/linux/mounting-ntfs.md",
@@ -422,38 +538,7 @@
 		"/home/zod/Workspace/rails/dux-bellorum/app/views/posts/.fuse_hidden0000472f00000004",
 		"/home/zod/Workspace/rails/dux-bellorum/test/decorators/posts_decorator_test.rb",
 		"/home/zod/Workspace/rails/dux-bellorum/app/decorators/session_decorator.rb",
-		"/home/zod/Workspace/rails/dux-bellorum/app/decorators/users_decorator.rb",
-		"/home/zod/Workspace/rails/dux-bellorum/app/decorators/replies_decorator.rb",
-		"/home/zod/Workspace/rails/dux-bellorum/app/helpers/replies_helper.rb",
-		"/home/zod/Workspace/rails/dux-bellorum/test/fixtures/replies.yml",
-		"/home/zod/Workspace/rails/dux-bellorum/app/views/replies/_form.html.slim",
-		"/home/zod/Workspace/rails/dux-bellorum/app/models/reply.rb",
-		"/home/zod/Workspace/rails/dux-bellorum/app/controllers/replies_controller.rb",
-		"/home/zod/Workspace/techie-note/rails/form.md",
-		"/home/zod/Workspace/UNIX tips",
-		"/home/zod/Workspace/scripts/backup.sh",
-		"/home/zod/Workspace/scripts/exclude-list",
-		"/home/zod/Workspace/scripts/exlude-list",
-		"/home/zod/Workspace/scripts/exlude-list.txt",
-		"/home/zod/Workspace/rails/dux-bellorum/app/assets/stylesheets/users.scss",
-		"/home/zod/Workspace/rails/dux-bellorum/db/migrate/20150411194838_add_role_to_users.rb",
-		"/home/zod/Workspace/rails/dux-bellorum/db/migrate/20150412092502_add_status_to_posts.rb",
-		"/home/zod/Workspace/techie-note/rails/generating-scaffold.md",
-		"/home/zod/Workspace/rails/dux-bellorum/db/migrate/20150411194307_add_role_to_users.rb",
-		"/home/zod/Workspace/rails/dux-bellorum/app/views/users/_form.html.slim",
-		"/home/zod/Workspace/rails/dux-bellorum/db/migrate/20150411161500_remove_password_from_users.rb",
-		"/home/zod/Workspace/rails/dux-bellorum/db/migrate/20150411103309_add_password_salt_to_users.rb",
-		"/home/zod/Workspace/techie-note/rails/routes.md",
-		"/home/zod/Workspace/rails/dux-bellorum/app/views/users/new.html.slim",
-		"/home/zod/Workspace/rails/dux-bellorum/db/migrate/20150410210452_add_password_hash_to_users.rb",
-		"/home/zod/Workspace/rails/dux-bellorum/app/views/index/index.html.slim",
-		"/home/zod/Workspace/techie-note/rails/techi-note_on_bordel.md",
-		"/home/zod/Workspace/techie-note/rails/install-rails.html",
-		"/home/zod/Workspace/rails/dux-bellorum/db/schema.rb",
-		"/home/zod/Workspace/rails/dux-bellorum/db/migrate/20150410205909_add_password_hash_to_user.rb",
-		"/home/zod/Workspace/rails/dux-bellorum/config/database.yml",
-		"/home/zod/Workspace/techie-note/rails/install-rails.md",
-		"/home/zod/Workspace/techie-note/linux/mounting-ntfs.md"
+		"/home/zod/Workspace/rails/dux-bellorum/app/decorators/users_decorator.rb"
 	],
 	"find":
 	{
@@ -464,6 +549,7 @@
 		"height": 282.0,
 		"where_history":
 		[
+			"/home/zod/Workspace/rails/token2me",
 			"/home/zod/Workspace/rails/dux-bellorum/test/",
 			"/home/zod/Workspace/rails/dux-bellorum/",
 			"/home/zod/Workspace/rails/dux-bellorum/vendor/bundle/ruby/2.2.0/gems/bootstrap-sass-3.3.4.1",
@@ -483,9 +569,44 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"where(access_type: Token.access_types[access_type])",
+			"last",
+			"where(access_type: Token.access_types[access_type]).",
+			"where(access_type: Token.access_types[access_type])",
+			"where(access_type: Token.access_types[access_type]).",
+			"Token2Me",
+			"comment",
+			"\n  comment",
+			"  comme",
+			"  comment",
+			" commen",
+			"lala",
+			"comment: lala",
+			"comment: ",
+			"comment: lala",
+			"comment: ",
+			"update",
+			"current_user",
+			"user_id: ",
+			"ed",
+			"access_type:'serve",
+			" 0",
+			"assert_redirect_to",
+			"@token",
+			"-",
+			"srv",
+			"queued-srv",
+			"-",
+			"srv",
+			"queued-srv",
+			"-",
+			"srv",
+			"))\n",
+			"    ",
+			"simple-form",
 			"ERROR",
 			"hash",
 			"token.user",
@@ -578,37 +699,16 @@
 			"rails_env",
 			"error",
 			"errror",
-			"do",
-			"1",
-			"== ",
-			"Getting",
-			"\"",
-			"= ",
-			"\"",
-			"'",
-			"amaron",
-			"amaron_id",
-			"\"/",
-			"soup",
-			"/home/",
-			"categories",
-			"alias",
-			"\"",
-			"$1",
-			"Category",
-			"route.rb",
-			"route",
-			"fi",
-			"uid",
-			"0",
-			"Data"
+			"do"
 		],
-		"highlight": true,
+		"highlight": false,
 		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"TokenTracker",
+			"_",
 			"require 'simplecov'\nSimpleCov.start",
 			"require 'simplecov'\nrequire 'test_helper'",
 			"",
@@ -629,8 +729,187 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/views/session/new.html.slim",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 391,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								97,
+								97
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/layouts/application.html.slim",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1722,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1319,
+								1319
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 207.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/controllers/tokens_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1504,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								391,
+								391
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 138.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "config/routes.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2301,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								403,
+								403
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/models/token.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1749,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								747,
+								747
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 207.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/tokens/index.html.slim",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1290,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1172,
+								1172
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 414.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -671,7 +950,7 @@
 	},
 	"output.find_results":
 	{
-		"height": 140.0
+		"height": 306.0
 	},
 	"output.git":
 	{
@@ -681,7 +960,7 @@
 	"project": "token2me.sublime-project",
 	"replace":
 	{
-		"height": 120.0
+		"height": 86.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -691,11 +970,27 @@
 		"selected_items":
 		[
 			[
-				"route",
-				"dux-bellorum/config/routes.rb"
+				"routes",
+				"token2me/config/routes.rb"
 			],
 			[
-				"routes",
+				"rout",
+				"token2me/config/routes.rb"
+			],
+			[
+				"",
+				"token2me/app/controllers/tokens_controller.rb"
+			],
+			[
+				"tokens.rb",
+				"token2me/vendor/bundle/gems/coderay-1.1.0/lib/coderay/tokens.rb"
+			],
+			[
+				"tokenscontr",
+				"token2me/app/controllers/tokens_controller.rb"
+			],
+			[
+				"route",
 				"dux-bellorum/config/routes.rb"
 			],
 			[
@@ -827,10 +1122,6 @@
 				"app/models/genre.rb"
 			],
 			[
-				"",
-				"app/views/layouts/application.html.erb"
-			],
-			[
 				"layou",
 				"app/views/layouts/application.html.erb"
 			],
@@ -900,7 +1191,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 354.0,
+	"side_bar_width": 434.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

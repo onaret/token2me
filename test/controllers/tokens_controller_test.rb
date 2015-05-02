@@ -8,7 +8,7 @@ class TokensControllerTest < ActionController::TestCase
 
   test "should get index" do
     get :index, access_type: 'server'
-    assert_redirected_to tokens_path('server')
+    assert_response :success
   end
 
   test "should get new" do
@@ -18,7 +18,8 @@ class TokensControllerTest < ActionController::TestCase
 
   test "should create token" do
     assert_difference('Token.count') do
-      post :create, token: {comment: 'New token!'}, access_type: 'server'
+      post :create, access_type: 'server', commit: 'Get Token', token: {comment: 'New token!'}
+      puts Token.all.last.comment
     end
     assert_redirected_to tokens_path('server')
   end

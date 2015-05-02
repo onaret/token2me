@@ -6,9 +6,16 @@ class SessionControllerTest < ActionController::TestCase
     @eddy = users(:ed)
   end
 
-  test "should get log_in" do
+  test "should login as known user" do
     get :login, name: @eddy.name, password: 'unset'
     assert_redirected_to root_path
+  end
+
+  test "should login as first connect" do
+    get :login, name: 'go', password: 'unset'
+    assert_redirected_to edit_user_path(User.all.last)
+  #  assert_redirected_to edit_user_path(controller: "user", action: "edit")
+ #   assert_redirected_to controller: "user", action: "edit"
   end
 
   test "should get log_out" do
@@ -19,7 +26,7 @@ class SessionControllerTest < ActionController::TestCase
 
   test "should go to session login" do
     get :new
-    assert_redirected_to root_path
+    assert_response :success
   end
 
   test "should get to token path as a user is already logged in" do
