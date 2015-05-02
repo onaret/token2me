@@ -1,11 +1,37 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  status: 1
-  comment: 1
-  user_id: 
+archived_srv:
+  status: 3
+  comment: lolo
+  access_type: 0
+  user_id: 1
 
-two:
+queued_srv:
+  status: 2
+  comment: lala
+  access_type: 0
+  user_id: 1
+
+active_srv:
   status: 1
-  comment: 1
-  user_id: 
+  comment: lulu
+  access_type: 0
+  user_id: 1
+
+archived_ui:
+  status: 3
+  comment: lolo
+  access_type: 1
+  user_id: 1
+
+queued_ui:
+  status: 2
+  comment: lala
+  access_type: 1
+  user_id: 1
+
+active_ui:
+  status: 1
+  comment: lulu
+  access_type: 1
+  user_id: 1
