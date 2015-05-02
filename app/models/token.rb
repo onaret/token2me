@@ -4,6 +4,8 @@ class Token < ActiveRecord::Base
   enum status: [ :free, :queued, :active, :archived ]
   enum access_type: [ :server, :ui ]
 
+  validates_presence_of :status, :access_type
+
   scope :of_access_type, -> (access_type) {where(access_type:  Token.access_types[access_type])}
   scope :of_status, -> (status) {where(status: Token.statuses[status])}
 #  scope :active_token_for, -> (access_type) {find_by(access_type: Token.access_types[access_type], status: Token.statuses[:active])}
@@ -13,6 +15,8 @@ class Token < ActiveRecord::Base
   def self.free?(token_list)
     unless token_list.empty?
       token_list.first.archived?
+    else
+      none
     end
   end
 
@@ -44,11 +48,15 @@ class Token < ActiveRecord::Base
   end
 
   def self.get_next_status(access_type)
-    last_status= last_token(access_type).status.to_sym
-    if last_status == :archived
+    if Token.of_access_type(access_type).empty?
       :active
-    elsif last_status == :active || last_status == :queued
-      :queued
+    else
+      last_status= last_token(access_type).status.to_sym
+      if last_status == :archived
+        :active
+      elsif last_status == :active || last_status == :queued
+        :queued
+      end
     end
   end
 

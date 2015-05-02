@@ -41,7 +41,7 @@ class TokensController < ApplicationController
   end
 
   def reset_token
-    Token.reset_token
+    Token.reset_token params[:access_type]
     redirect_to action: "index"
   end
   

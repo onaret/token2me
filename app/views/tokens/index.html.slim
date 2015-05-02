@@ -29,11 +29,7 @@ table class='table col-sm-6'
         = user_presenter.team(:td)
         = token_presenter.created_at(:td)
         = token_presenter.updated_at(:td)
-
 br
-
-
-
 
 -if Token.free? @tokens
   = link_to 'Take Token', new_token_path(params[:access_type]), class: 'btn btn-primary blanck-text'
