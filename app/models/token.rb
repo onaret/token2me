@@ -4,53 +4,51 @@ class Token < ActiveRecord::Base
   enum status: [ :free, :active, :queued, :archived  ]
   enum access_type: [ :server, :ui ]
 
-  def self.free_init?(access_type)
-    Token.where(access_type: access_type.to_sym).last.archived?
-  end
-
   def self.free?(token_list)
     token_list.first.archived?
   end
 
-
-  def self.build_token(token_params)
+  def self.build_token(token_params, access_type)
     token = Token.new(token_params)
-    token.status = get_current_token_status
+    token.access_type = access_type
+    token.status = get_next_status(access_type)
     token
   end
 
-  def self.get_current_token_status
-    last_status = Token.all.last.status.to_sym
-    if last_status== :archived
+  def self.active_team(access_type)
+    Token.active(access_type).user.team 
+  end
+
+  def self.release_token(access_type)
+    active_token = active(access_type)
+    active_token.update(status: :archived)
+    if active_token != last_token(access_type)
+      next_token = Token.find_by(access_type: Token.access_types[access_type], id: active_token.id + 1)
+      next_token.update(status: :active)
+  #  else
+  #    next_token = Token.new.save
+    end
+  end
+
+  def self.get_next_status(access_type)
+    last_status= last_token(access_type).status.to_sym
+    if last_status == :archived
       :active
     elsif last_status == :active || last_status == :queued
       :queued
     end
   end
 
-  def last_status
-    Token.all.last.status
+  def self.list(access_type)
+    Token.where(access_type: Token.access_types[access_type]).order(created_at: :desc)
   end
-
-  def self.release_token(access_type)
-    active_token = Token.active(access_type)
-    active_token.status = :archived
-    active_token.save
-    if active_token != Token.all.last
-      next_token = Token.find(active_token.id + 1)
-      next_token.status = :active
-      next_token.save
-    end
+  
+  def self.last_token(access_type)
+    Token.where(access_type: Token.access_types[access_type]).last
   end
 
   def self.active(access_type)
-    if access_type == 'server'
-      access_type=0
-    else
-      access_type=1
-    end
-
-    Token.find_by(access_type: access_type, status: 1)
+    Token.find_by(access_type: Token.access_types[access_type], status: 1)
   end
 
 end
