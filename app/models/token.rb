@@ -4,9 +4,14 @@ class Token < ActiveRecord::Base
   enum status: [ :free, :active, :queued, :archived  ]
   enum access_type: [ :server, :ui ]
 
-  def self.free?
-    Token.all.last.archived?
+  def self.free_init?(access_type)
+    Token.where(access_type: access_type.to_sym).last.archived?
   end
+
+  def self.free?(token_list)
+    token_list.first.archived?
+  end
+
 
   def self.build_token(token_params)
     token = Token.new(token_params)
@@ -23,25 +28,29 @@ class Token < ActiveRecord::Base
     end
   end
 
-  def self.release_token
-    active_token = Token.active
-    if active_token
-      active_token.status = :archived
-      active_token.save
-      if active_token != Token.all.last
-        next_token = Token.find(active_token.id + 1)
-        next_token.status = :active
-        next_token.save
-      end
-    end
-  end
-
   def last_status
     Token.all.last.status
   end
 
-  def self.active
-    Token.find_by(status: 1)
+  def self.release_token(access_type)
+    active_token = Token.active(access_type)
+    active_token.status = :archived
+    active_token.save
+    if active_token != Token.all.last
+      next_token = Token.find(active_token.id + 1)
+      next_token.status = :active
+      next_token.save
+    end
+  end
+
+  def self.active(access_type)
+    if access_type == 'server'
+      access_type=0
+    else
+      access_type=1
+    end
+
+    Token.find_by(access_type: access_type, status: 1)
   end
 
 end

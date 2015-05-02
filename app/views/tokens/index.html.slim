@@ -11,7 +11,7 @@ table class='table col-sm-6'
       th Released
 
   tbody
-    - if Token.free?
+    - if Token.free? @tokens
       tr
         td class="token-status-free" Free 
         td
@@ -35,12 +35,12 @@ br
 
 
 
--if Token.free? 
-  = link_to 'Take Token', new_token_path, class: 'btn btn-primary blanck-text'
+-if Token.free? @tokens
+  = link_to 'Take Token', new_token_path(params[:access_type]), class: 'btn btn-primary blanck-text'
   
 -else
-  -if current_user.team != Token.active.user.team
-    = link_to 'Ask Token', new_token_path, class: 'btn btn-primary blanck-text'
-    = link_to 'Free Token', release_token_path, class: 'btn btn-primary', data: {:confirm => 'Your team does not have the token, are you sure you can release it?'}
+  -if current_user.team != Token.active(params[:access_type]).user.team
+    = link_to 'Ask Token', new_token_path(params[:access_type]), class: 'btn btn-primary blanck-text'
+    = link_to 'Free Token', release_token_path(params[:access_type]), class: 'btn btn-primary', data: {:confirm => 'Your team does not have the token, are you sure you can release it?'}
   -else
-    = link_to 'Release Token', release_token_path, class: 'btn btn-primary blanck-text'
+    = link_to 'Release Token', release_token_path(params[:access_type]), class: 'btn btn-primary blanck-text'

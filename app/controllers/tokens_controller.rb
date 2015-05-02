@@ -3,10 +3,16 @@ class TokensController < ApplicationController
   # GET :access_type/tokens
   # GET :access_type/tokens.json
   def index
-    @tokens = Token.where(access_type: params[:access_type]).order(created_at: :desc)
-    if Token.free?
+    if params[:access_type] == 'server'
+      access_type=0
+    else
+      access_type=1
+    end
+    @tokens = Token.where(access_type: access_type).order(created_at: :desc)
+
+    if Token.free? @tokens
       flash[:notice] = "Token is free"
-    elsif Token.active.user.team == current_user.team
+    elsif Token.active(params[:access_type]).user.team == current_user.team
       flash[:notice] = "<strong>Your team have the token</strong>".html_safe
     else
       flash[:notice] = "Token is is use"
@@ -16,23 +22,19 @@ class TokensController < ApplicationController
   # GET /tokens/new
   def new
     @token = Token.new
+    @token.access_type = params[:access_type]
   end
 
   # POST :access_type/tokens
   # POST :access_type/tokens.json
   def create
     @token = Token.build_token(token_params)
-    @token = params[:access_type]
+    @token.access_type = params[:access_type]
     @token.user = current_user
     respond_to do |format|
       if @token.save
-        if @token.access_type == 'server'
-          format.html { redirect_to server_token_index_path, notice: 'You have the token.' }
-          format.json { render :show, status: :created, location: server_token_index_path }
-        else
-          format.html { redirect_to ui_token_index_path, notice: 'You have the token.' }
-          format.json { render :show, status: :created, location: ui_token_index_path }
-        end
+        format.html { redirect_to tokens_path(params[:access_type]), notice: 'You have the ' + params[:access_type] + ' token.' }
+        format.json { render :show, status: :created, location: tokens_path(params[:access_type]) }
       else
         format.html { render :new }
         format.json { render json: @token.errors, status: :unprocessable_entity }
@@ -41,9 +43,7 @@ class TokensController < ApplicationController
   end
 
   def release_token
-    Token.release_token
-    @tokens = Token.all.order(created_at: :desc)
-    @last_token_status = Token.all.last.status
+    Token.release_token params[:access_type]
     redirect_to action: "index"
   end
 

@@ -2,8 +2,9 @@ Rails.application.routes.draw do
 
   root to: "session#new"
 
-  resources :tokens, path: '/tokens/:access_type', only: [:index, :new, :create, :destroy], as: 'ui_token', :access_type => "ui"
-  resources :tokens, path: '/tokens/:access_type', only: [:index, :new, :create, :destroy], as: 'server_token', :access_type => "server"
+  resources :tokens, path: '/tokens/:access_type', only: [:index, :new, :create, :destroy], :defaults => { :access_type => 'server' }
+  
+  #resources :tokens, path: '/tokens/:access_type', only: [:index, :new, :create, :destroy], as: 'server_token', :access_type => "server"
 
   post 'session/login'
 
@@ -14,7 +15,7 @@ Rails.application.routes.draw do
   #  resources :messages
   resources :users, only: [:show, :new, :create, :update]
 
-  get 'release_token' => 'tokens#release_token'
+  get 'release_token/:access_type' => 'tokens#release_token', as: 'release_token'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -4,7 +4,7 @@ class SessionController < ApplicationController
 
   def new
     if current_user
-      redirect_to server_token_index_path
+      redirect_to tokens_path
     end
   end
   
