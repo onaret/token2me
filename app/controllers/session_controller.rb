@@ -2,6 +2,8 @@ require 'net/ldap'
 
 class SessionController < ApplicationController
 
+  before_action :check_session, :except => [:new, :login]
+
   def new
     if current_user
       redirect_to tokens_path

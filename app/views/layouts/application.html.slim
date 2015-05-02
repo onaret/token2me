@@ -31,7 +31,7 @@ html
     
     .container
       -if current_user
-        p Welcome #{current_user.name} ( #{current_user.team} )
+        p Welcome #{current_user.name} ( #{current_user.team} ) #{link_to 'Logout ? ', session_logout_path}
       flash
         -if flash[:notice]
           p class="alert alert-success" =flash[:notice]

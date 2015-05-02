@@ -2,10 +2,10 @@
 
 ed:
   name: ed
-  team: black
+  team: 1
   email: lolol@lol.lol
 
 on:
   name: on
-  team: silver
+  team: 0
   email: lolol@lol.lol

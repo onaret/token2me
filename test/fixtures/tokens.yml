@@ -2,36 +2,42 @@
 
 archived_srv:
   status: 3
-  comment: lolo
+  comment: lolo_ser_archived
   access_type: 0
-  user_id: 1
+  user: on
+  id: 1
 
 queued_srv:
   status: 2
-  comment: lala
+  comment: lala_ser_actived
   access_type: 0
-  user_id: 1
+  user: ed
+  id: 2
 
 active_srv:
   status: 1
-  comment: lulu
+  comment: lulu_ser_queued
   access_type: 0
-  user_id: 1
+  user: on
+  id: 3
 
 archived_ui:
   status: 3
-  comment: lolo
+  comment: lolo_UI_archived
   access_type: 1
-  user_id: 1
+  user: ed
+  id: 4
 
 queued_ui:
   status: 2
-  comment: lala
+  comment: lala_UI_actived
   access_type: 1
-  user_id: 1
+  user: on
+  id: 5
 
 active_ui:
   status: 1
-  comment: lulu
+  comment: lulu_UI_queued
   access_type: 1
-  user_id: 1
+  user: on
+  id: 6

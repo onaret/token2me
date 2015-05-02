@@ -18,8 +18,8 @@ class TokensControllerTest < ActionController::TestCase
 
   test "should create token" do
     assert_difference('Token.count') do
-    post :create, token: { comment: @token_srv.comment, status: @token_srv.status, user_id: @token_srv.user_id}, access_type: 'server'
-  end
+      post :create, token: {comment: 'New token!'}, access_type: 'server'
+    end
     assert_redirected_to tokens_path('server')
   end
 

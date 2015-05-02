@@ -14,11 +14,12 @@ class SessionControllerTest < ActionController::TestCase
   test "should get log_out" do
     get :logout
     assert_redirected_to root_path
+    assert_nil(session[:user_id])
   end
 
   test "should go to session login" do
     get :new
-    assert_response :success 
+    assert_redirected_to root_path
   end
 
   test "should get to token path as a user is already logged in" do

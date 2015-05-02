@@ -1,7 +1,7 @@
 class Token < ActiveRecord::Base
   belongs_to :user
   
-  enum status: [ :free, :active, :queued, :archived  ]
+  enum status: [ :free, :queued, :active, :archived ]
   enum access_type: [ :server, :ui ]
 
   def self.free?(token_list)
@@ -22,8 +22,8 @@ class Token < ActiveRecord::Base
   def self.release_token(access_type)
     active_token = active(access_type)
     active_token.update(status: :archived)
-    if active_token != last_token(access_type)
-      next_token = Token.find_by(access_type: Token.access_types[access_type], id: active_token.id + 1)
+    if last_token(access_type).queued?
+      next_token = Token.where(access_type: Token.access_types[access_type], status: Token.statuses[:queued]).order(id: :asc).first
       next_token.update(status: :active)
   #  else
   #    next_token = Token.new.save
@@ -40,7 +40,7 @@ class Token < ActiveRecord::Base
   end
 
   def self.list(access_type)
-    Token.where(access_type: Token.access_types[access_type]).order(created_at: :desc)
+    Token.where(access_type: Token.access_types[access_type]).order(id: :desc)
   end
   
   def self.last_token(access_type)
@@ -48,7 +48,7 @@ class Token < ActiveRecord::Base
   end
 
   def self.active(access_type)
-    Token.find_by(access_type: Token.access_types[access_type], status: 1)
+    Token.find_by(access_type: Token.access_types[access_type], status: Token.statuses[:active])
   end
 
 end

@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get 'session/new'
 
   #  resources :messages
-  resources :users, only: [:show, :new, :create, :update]
+  resources :users, only: [:show, :new, :create, :edit, :update]
 
   get 'release_token/:access_type' => 'tokens#release_token', as: 'release_token'
 
