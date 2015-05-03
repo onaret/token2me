@@ -1,5 +1,5 @@
 h1 Claim token
 
-= bootstrap_form_for(@token, url:"/tokens/"+ params[:access_type], layout: :default, remote: true) do |f|
+= bootstrap_form_for(@token, url:"/tokens/"+ params[:access_type], layout: :default) do |f|
     = f.text_field :comment
     = f.submit "Get Token"

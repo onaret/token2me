@@ -29,7 +29,7 @@ class TokensController < ApplicationController
     @token.user = current_user
     respond_to do |format|
       if @token.save
-        format.js { render :index}
+        format.html { redirect_to tokens_path(params[:access_type])}
         format.json { render :show, status: :created, location: tokens_path(params[:access_type]) }
       else
         format.html { render :new }
