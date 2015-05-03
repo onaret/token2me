@@ -17,6 +17,9 @@ class TokensController < ApplicationController
   # GET /tokens/new
   def new
     @token = Token.new
+    respond_to do |format|
+       format.js{}
+    end
   end
 
   # POST :access_type/tokens
@@ -26,7 +29,7 @@ class TokensController < ApplicationController
     @token.user = current_user
     respond_to do |format|
       if @token.save
-        format.html { redirect_to tokens_path(params[:access_type]) }
+        format.js { render :index}
         format.json { render :show, status: :created, location: tokens_path(params[:access_type]) }
       else
         format.html { render :new }
@@ -34,6 +37,8 @@ class TokensController < ApplicationController
       end
     end
   end
+
+
 
   def release_token
     Token.release_token params[:access_type]

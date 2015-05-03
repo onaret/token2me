@@ -1,9 +1,7 @@
-.container class="col-sm-8 col-sm-offset-4"	 class="starter-template"
+.col-sm-6 class="col-sm-offset-3"
 	h1 Welcome to TokenTracker
-    p class="lead" Please sign in
-
-    .col-sm-8
-		= bootstrap_form_tag layout: :horizontal do |f|
-			= f.text_field :name, label: 'Identification'
-			= f.password_field :password
-			= f.submit "Connect to token2me", class: 'btn btn-primary', formaction: session_login_path, formmethod: 'post'
+	p class="lead" Please sign in
+	= bootstrap_form_tag layout: :horizontal do |f|
+		= f.text_field :ident, label: 'Identification'
+		= f.password_field :password
+		= f.submit "Connect to TokenTracker", class: 'btn btn-primary', formaction: session_login_path, formmethod: 'post'

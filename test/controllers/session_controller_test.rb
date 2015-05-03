@@ -13,7 +13,8 @@ class SessionControllerTest < ActionController::TestCase
 
   test "should login as first connect" do
     get :login, name: 'go', password: 'unset'
-    assert_redirected_to edit_user_path(User.all.last)
+    assert_redirected_to root_path
+   # assert_redirected_to edit_user_path(User.all.last)
   #  assert_redirected_to edit_user_path(controller: "user", action: "edit")
  #   assert_redirected_to controller: "user", action: "edit"
   end

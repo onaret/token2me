@@ -5,8 +5,10 @@ class SessionController < ApplicationController
   before_action :check_session, :except => [:new, :login]
 
   def new
-    if current_user
+    if current_user && current_user.team
       redirect_to tokens_path
+    elsif current_user
+      redirect_to edit_user_path(current_user), notice: "Set you team"
     end
   end
   
@@ -14,36 +16,52 @@ class SessionController < ApplicationController
     host = 'ldap.axway.int'
     port =  389
     path = "ou=Employees,dc=axway,dc=int"
-    ident, psw = "#{params[:name]}@axway.com", params[:password]
+    ident_full, psw = "#{params[:ident]}@axway.com", params[:password]
 
     ldap = Net::LDAP.new    :host => host,
           :port => "389", 
           :base => path,
           :auth => {
             :method => :simple,
-            :username => ident,
+            :username => ident_full,
             :password => psw 
           }
 
     result_attrs = ["sAMAccountName", "displayname", "mail"]
 
     # Build filter
-    search_filter = Net::LDAP::Filter.eq("sAMAccountName", params[:name])
+    search_filter = Net::LDAP::Filter.eq("sAMAccountName", params[:ident])
 
-    # Execute search
-    #ldap.search(:filter => search_filter, :attributes => result_attrs, :return_result => false) do |item| 
-    #   username = item.sAMAccountName.first 
-    #    notice = "Connected as #{username}: #{item.displayName.first} (#{item.mail.first})."
-        user = User.where(name: params[:name]).first_or_create
-        session[:user_id] = user.id
+    # Execute search     
+#   ldap.search(:filter => search_filter, :attributes => result_attrs, :return_result => false) do |item| 
+      # notice = "Connected as #{username}: #{item.displayName.first} (#{item.mail.first})."
+      
+      #Wokrkaround waiting LDAP
 
-        if user.team
-          redirect_to root_path
-        else
-          redirect_to edit_user_path(user), notice: "Set you team"
-        end
+      item = {
+        sAMAccountName: {first: params[:ident]}, 
+        displayName: {first: params[:ident]}, 
+        mail: {first: ident_full}
+      }
 
-    #end
+      username = item[:sAMAccountName][:first]
+      #username = item.sAMAccountName.first 
+
+      #NB : I think user.ident is initialized here if the user is new
+      user = User.where(ident: username).first_or_initialize
+      
+      unless user.id
+        user.name = item[:displayName][:first]
+        #user.name = item.displayName.first
+        user.email = item[:mail][:first]
+        #user.email = item.mail.first
+        user.save
+      end
+      
+      session[:user_id] = user.id
+      redirect_to root_path
+
+   #end
 
   end
 

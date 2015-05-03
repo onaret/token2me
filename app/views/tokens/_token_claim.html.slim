@@ -1,0 +1,12 @@
+    -if Token.free? @tokens
+      = link_to 'Take Token', new_token_path(params[:access_type]), class: 'btn btn-primary',  remote: true
+      
+    -else
+      -if Token.team_is_in_queued?((params[:access_type]), current_user.team)
+        = link_to 'Cancel Request', cancel_request_path(params[:access_type]), class: 'btn btn-primary'
+        = link_to '(Force token release)', release_token_path(params[:access_type]), class: 'stealth-opn', data: {:confirm => 'Your team does not have the token, are you sure you can release it?'}
+      -elsif current_user.team != Token.active_team(params[:access_type])
+        = link_to 'Ask Token', new_token_path(params[:access_type]), class: 'btn btn-primary',  remote: true
+        = link_to '(Force token release)', release_token_path(params[:access_type]), class: 'stealth-opn', data: {:confirm => 'Your team does not have the token, are you sure you can release it?'}
+      -else
+        = link_to 'Release Token', release_token_path(params[:access_type]), class: 'btn btn-primary'

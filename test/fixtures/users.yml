@@ -1,11 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 ed:
-  name: ed
+  name: eddy
   team: 1
-  email: lolol@lol.lol
+  email: eddy@axway.com
 
 on:
-  name: on
+  name: olivier
   team: 0
-  email: lolol@lol.lol
+  email: olivier@axway.com
+
+evette:
+  name: evette
+  team: 2
+  email: evette@axway.com

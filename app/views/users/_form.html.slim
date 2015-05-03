@@ -1,5 +1,4 @@
-= bootstrap_form_for(@user, layout: :horizontal, label_col: "col-sm-4", control_col: "col-sm-4") do |f|
+= bootstrap_form_for(@user, layout: :default) do |f|
     = f.select :team, User.teams.keys, label: "Select your team"
-
     = f.form_group
     	= f.submit

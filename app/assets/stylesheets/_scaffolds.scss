@@ -1,6 +1,6 @@
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: $blue-light;
+  color: $blue-4;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -36,18 +36,18 @@ div {
 }
 
 #notice {
-  color: green;
+  color: $green-4;
 }
 
 .field_with_errors {
   padding: 2px;
-  background-color: red;
+  background-color: $red-4;
   display: table;
 }
 
 #error_explanation {
   width: 450px;
-  border: 2px solid red;
+  border: 2px solid $red-4;
   padding: 7px;
   padding-bottom: 0;
   margin-bottom: 20px;
@@ -66,4 +66,53 @@ div {
     font-size: 12px;
     list-style: square;
   }
+}
+
+//Custom
+
+.btn-primary {
+    background-color:$green-2;
+    border-color:$green-4;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background-color: $green-3;
+    border-color:$green-4;
+}
+
+body { 
+  padding-top: 70px; 
+  font-size:12px;
+}
+
+a { 
+  color: inherit; 
+} 
+
+.btn {
+  margin-right:5px;
+}
+
+.form-group input {
+  width :50%
+}
+
+.alert-info {
+    background-color: $green-1;
+    border-color: $green-4;
+    color: $blue-light;
+}
+
+#user-status {
+  font-weight: bold;
+  text-align: right;
+}
+
+.logo {
+  text-align: right;
+}
+
+.small {
+  width: 64;
+  height: 48;
 }

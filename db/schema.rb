@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150501174425) do
+ActiveRecord::Schema.define(version: 20150503123304) do
 
   create_table "messages", force: :cascade do |t|
     t.string   "content"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20150501174425) do
     t.string  "name"
     t.string  "email"
     t.integer "team"
+    t.string  "ident"
   end
 
 end

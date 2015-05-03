@@ -2,7 +2,7 @@ require 'test_helper'
 
 class TokensControllerTest < ActionController::TestCase
   setup do
-    @token_srv = tokens(:active_srv)
+    @token_srv = tokens(:active_srv_1)
     session[:user_id] = users(:ed).id
   end
 

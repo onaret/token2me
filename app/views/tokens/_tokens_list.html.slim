@@ -1,0 +1,19 @@
+table class='table'
+  thead
+    tr
+      th class="col-md-2" Status
+      th class="col-md-1" User
+      th class="col-md-1" Team
+      th class="col-md-2" Asked
+      th class="col-md-6" Comment
+
+  tbody
+    - if Token.free? @tokens
+      tr
+        td class="token-status-free" Free 
+        td
+        td
+        td
+        td
+    - @tokens.each do |token|
+      ==render token

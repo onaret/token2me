@@ -53,19 +53,3 @@ $colHover       : #FFFFFF;
             color: $colHover;
             background-color: $bgHighlight; }}
 }
-
-.btn-primary
-{
-    background-color:$green-2;
-    border-color:$green-3;
-}
-
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
-    background-color: $green-3;
-    border-color:$green-4;
-}
-
-body { padding-top: 70px; font-size:12px}
-a { color: inherit; } 
-// .btn {margin-right:5px;}
-.form-group input {width :50%}

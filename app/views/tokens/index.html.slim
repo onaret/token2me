@@ -1,45 +1,13 @@
-h1 Token status
+.row
+  h1 Token status
 
-table class='table col-sm-6'
-  thead
-    tr
-      th Status
-      th Comment
-      th User
-      th Team
-      th Asked
-      th Released
+  #token-list
+    ==render 'tokens/tokens_list'
 
-  tbody
-    - if Token.free? @tokens
-      tr
-        td class="token-status-free" Free 
-        td
-        td
-        td
-        td
-        td
-    - @tokens.each do |token|
-      - user_presenter = UserPresenter.new(token.user, self)
-      - token_presenter = TokenPresenter.new(token, self)
-      tr
-        = token_presenter.status(:td)
-        td = token.comment
-        td = token.user.name
-        = user_presenter.team(:td)
-        = token_presenter.created_at(:td)
-        = token_presenter.updated_at(:td)
-br
+  br
 
--if Token.free? @tokens
-  = link_to 'Take Token', new_token_path(params[:access_type]), class: 'btn btn-primary'
-  
--else
-  -if Token.team_is_in_queued?((params[:access_type]), current_user.team)
-    = link_to 'Cancel Request', cancel_request_path(params[:access_type]), class: 'btn btn-primary'
-    = link_to '(Force token release)', release_token_path(params[:access_type]), class: 'stealth-opn', data: {:confirm => 'Your team does not have the token, are you sure you can release it?'}
-  -elsif current_user.team != Token.active_team(params[:access_type])
-    = link_to 'Ask Token', new_token_path(params[:access_type]), class: 'btn btn-primary'
-    = link_to '(Force token release)', release_token_path(params[:access_type]), class: 'stealth-opn', data: {:confirm => 'Your team does not have the token, are you sure you can release it?'}
-  -else
-    = link_to 'Release Token', release_token_path(params[:access_type]), class: 'btn btn-primary'
+.row
+  #token-new
+
+  #token-claim
+    ==render 'tokens/token_claim'

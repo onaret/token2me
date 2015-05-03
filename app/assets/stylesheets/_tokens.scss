@@ -6,78 +6,91 @@
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
 	-ms-border-radius: $radius;
-	border: 2px solid;
 	border-radius: $radius;
 }
 
 
-$green-0: #3C763C; /* Main Primary color */
-$green-1: #82B282;
-$green-2: #589258;
-$green-3: #236023;
-$green-4: #104810;
+table { 
+	border-collapse: separate; 
+}
 
-$blue-0: #2D5858; /* Main Secondary color (1) */
-$blue-1: #628686;
-$blue-2: #426D6D;
-$blue-3: #1A4848;
-$blue-4: #0C3636;
 
-$brown-0: #936C4B; /* Main Secondary color (2) */
-$brown-1: #DFBEA3;
-$brown-2: #B68E6D;
-$brown-3: #784F2C;
-$brown-4: #5A3414;
-
-$red-0:#934B4B;  /* Main Complement color */
-$red-1:#DFA3A3;
-$red-2:#B66D6D;
-$red-3:#782C2C;
-$red-4:#5A1414;
-
-.bold
+.table 
 {
+  table-layout:fixed;
+}
+
+.table td {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ // display: block;
+}
+/*
+.col-fx-1
+{
+	width:10%;
+}
+
+.col-fx-2
+{
+	width:15%;
+}
+
+.col-fx-6
+{
+	width:50%;
+}
+*/
+/*
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td  {
+	border-top:  1px solid $blue-3;
+}*/
+
+
+/*
+.table > thead > tr > th {
+    border-bottom: 2px solid $blue-3;
+    vertical-align: bottom;
+} */
+
+.bold {
 	font-weight: bold;
 }
 
-.stealth-opn
-{
+.stealth-opn {
 	font-weight: bold;
-	color: #337ab7;
+	color: $blue-4;
 }
 
-.token-status-btn
-{
+.token-status-cell {
 	@include border-radius(10px); 
 	font-weight: bold;
 	text-align: center;
 	color: #FFFFFF;
+	border: solid 1px; 
 }
 
-.token-status-free
-{
-	@extend .token-status-btn;
+.token-status-free {
+	@extend .token-status-cell;
 	background-color:$green-3;
 	border-color:$green-4;
 }
 
-.token-status-archived
-{
-	@extend .token-status-btn;
+.token-status-archived {
+	@extend .token-status-cell;
 	background-color:$blue-3;
 	border-color:$blue-4;
 }
 
-.token-status-queued
-{
-	@extend .token-status-btn;
+.token-status-queued {
+	@extend .token-status-cell;
 	background-color:$brown-3;
 	border-color:$brown-4;
 }
 
-.token-status-active
-{
-	@extend .token-status-btn;
+.token-status-active {
+	@extend .token-status-cell;
 	background-color:$red-3;
 	border-color:$red-4;
 }
