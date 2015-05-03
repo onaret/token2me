@@ -10,15 +10,14 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
 */
 
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "variables";
+@import "scaffolds";
+@import "nav";
+@import "tokens";
 
-body { padding-top: 70px; font-size:12px}
-a { color: inherit; } 
-.btn {margin-right:5px;}
-.form-group input {width :50%}
-table{font-size: 12px}
