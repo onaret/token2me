@@ -8,10 +8,10 @@ class Token < ActiveRecord::Base
 
   scope :of_access_type, -> (access_type) {where(access_type:  Token.access_types[access_type])}
   scope :of_status, -> (status) {where(status: Token.statuses[status])}
-  #  scope :active_token_for, -> (access_type) {find_by(access_type: Token.access_types[access_type], status: Token.statuses[:active])}
+# scope :active_token_for, -> (access_type) {find_by(access_type: Token.access_types[access_type], status: Token.statuses[:active])}
 
-#  scope :active_token_for, -> (access_type) {find_by(access_type: Token.access_types[access_type], status: Token.statuses[:active])}
-#  scope :active_token_for, -> (access_type) {where(access_type: Token.access_types[access_type], status: Token.statuses[:active]).first}
+# scope :active_token_for, -> (access_type) {find_by(access_type: Token.access_types[access_type], status: Token.statuses[:active])}
+# scope :active_token_for, -> (access_type) {where(access_type: Token.access_types[access_type], status: Token.statuses[:active]).first}
 
 
   def self.free?(token_list)
@@ -29,19 +29,27 @@ class Token < ActiveRecord::Base
     token
   end
 
+  def self.active_user(access_type)
+    active_token = active_token_for(access_type)
+    if active_token
+      active_token.user
+    end
+  end
+
   def self.active_team(access_type)
-    unless of_access_type(access_type).empty? 
-      active_token_for(access_type).user.team 
+    active_user = active_user(access_type)
+    if active_user
+      active_user.team
     end
   end
 
   def self.release_token(access_type)
     active_token = active_token_for(access_type)
-    active_token.update(status: :archived)
-    if last_token(access_type).queued?
-      next_token = Token.of_access_type(access_type).of_status(:queued).order(id: :asc).first.update(status: :active)
-  #  else
-  #    next_token = Token.new.save
+    if active_token
+      active_token.update(status: :archived)
+      if last_token(access_type).queued?
+        Token.of_access_type(access_type).of_status(:queued).order(id: :asc).first.update(status: :active)
+      end
     end
   end
 

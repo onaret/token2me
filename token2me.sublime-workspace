@@ -116,82 +116,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/layouts/application.html.slim",
-			"settings":
-			{
-				"buffer_size": 580,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/layouts/_nav.html.slim",
-			"settings":
-			{
-				"buffer_size": 1138,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/_scaffolds.scss",
-			"settings":
-			{
-				"buffer_size": 1695,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/session/new.html.slim",
-			"settings":
-			{
-				"buffer_size": 338,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/users/edit.html.slim",
-			"settings":
-			{
-				"buffer_size": 116,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/tokens/index.html.slim",
-			"settings":
-			{
-				"buffer_size": 1438,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/tokens/_token.html.slim",
-			"settings":
-			{
-				"buffer_size": 326,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/controllers/tokens_controller.rb",
 			"settings":
 			{
-				"buffer_size": 1672,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/tokens/index.js.erb",
-			"settings":
-			{
-				"buffer_size": 115,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/tokens/new.js.erb",
-			"settings":
-			{
-				"buffer_size": 67,
+				"buffer_size": 1653,
 				"line_ending": "Unix"
 			}
 		},
@@ -204,26 +132,10 @@
 			}
 		},
 		{
-			"file": "app/presenters/token_presenter.rb",
+			"file": "/etc/fstab",
 			"settings":
 			{
-				"buffer_size": 957,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/presenters/user_presenter.rb",
-			"settings":
-			{
-				"buffer_size": 209,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/_tokens.scss",
-			"settings":
-			{
-				"buffer_size": 1542,
+				"buffer_size": 1673,
 				"line_ending": "Unix"
 			}
 		}
@@ -474,10 +386,8 @@
 		"/home/zod/Workspace/rails/token2me/app/models/concerns",
 		"/home/zod/Workspace/rails/token2me/app/presenters",
 		"/home/zod/Workspace/rails/token2me/app/views",
-		"/home/zod/Workspace/rails/token2me/app/views/layouts",
 		"/home/zod/Workspace/rails/token2me/app/views/session",
 		"/home/zod/Workspace/rails/token2me/app/views/tokens",
-		"/home/zod/Workspace/rails/token2me/app/views/users",
 		"/home/zod/Workspace/rails/token2me/config",
 		"/home/zod/Workspace/rails/token2me/test",
 		"/home/zod/Workspace/rails/token2me/test/controllers",
@@ -490,22 +400,35 @@
 	],
 	"file_history":
 	[
+		"/home/zod/Workspace/rails/token2me/app/views/tokens/_form.html.slim",
+		"/home/zod/Workspace/rails/token2me/app/views/tokens/index.html.slim",
+		"/home/zod/Workspace/rails/token2me/app/controllers/tokens_controller.rb",
+		"/home/zod/Workspace/rails/token2me/app/assets/stylesheets/_tokens.scss",
+		"/home/zod/Workspace/rails/token2me/app/presenters/user_presenter.rb",
+		"/home/zod/Workspace/rails/token2me/app/presenters/token_presenter.rb",
+		"/home/zod/Workspace/rails/token2me/app/views/tokens/_tokens_list.html.slim",
+		"/home/zod/Workspace/rails/token2me/app/views/tokens/_token_claim.html.slim",
+		"/home/zod/Workspace/rails/token2me/app/views/tokens/new.js.erb",
+		"/home/zod/Workspace/rails/token2me/app/views/tokens/index.js.erb",
+		"/home/zod/Workspace/rails/token2me/app/views/layouts/application.html.slim",
+		"/home/zod/Workspace/rails/token2me/app/views/layouts/_nav.html.slim",
+		"/home/zod/Workspace/rails/token2me/app/assets/stylesheets/_scaffolds.scss",
+		"/home/zod/Workspace/rails/token2me/app/views/session/new.html.slim",
+		"/home/zod/Workspace/rails/token2me/app/views/users/edit.html.slim",
+		"/home/zod/Workspace/rails/token2me/app/views/tokens/_token.html.slim",
 		"/home/zod/Workspace/rails/token2me/app/views/tokens/new.html.slim",
 		"/home/zod/Workspace/rails/token2me/app/views/layouts/_notice.html.slim",
 		"/home/zod/Workspace/rails/token2me/app/views/layouts/_userstatus.html.slim",
-		"/home/zod/Workspace/rails/token2me/app/assets/stylesheets/_scaffolds.scss",
 		"/home/zod/Workspace/rails/token2me/config/routes.rb",
 		"/home/zod/Workspace/rails/token2me/test/fixtures/users.yml",
 		"/home/zod/Workspace/rails/token2me/test/fixtures/tokens.yml",
 		"/home/zod/Workspace/rails/token2me/test/controllers/session_controller_test.rb",
 		"/home/zod/Workspace/rails/token2me/app/controllers/session_controller.rb",
 		"/home/zod/Workspace/rails/token2me/test/controllers/tokens_controller_test.rb",
-		"/home/zod/Workspace/rails/token2me/app/views/users/edit.html.slim",
 		"/home/zod/Workspace/rails/token2me/app/assets/stylesheets/application.css.scss",
 		"/home/zod/Workspace/rails/token2me/app/controllers/users_controller.rb",
 		"/home/zod/Workspace/rails/token2me/app/views/users/new.html.slim",
 		"/home/zod/Workspace/rails/token2me/app/views/users/_form.html.slim",
-		"/home/zod/Workspace/rails/token2me/app/assets/stylesheets/_tokens.scss",
 		"/home/zod/Workspace/rails/token2me/app/assets/stylesheets/_variables.scss",
 		"/home/zod/Workspace/rails/snippets/other-flash.rb",
 		"/home/zod/Dropbox/techie-note/ruby/hashes.md",
@@ -514,15 +437,10 @@
 		"/home/zod/Workspace/rails/token2me/app/assets/stylesheets/_nav.scss",
 		"/home/zod/Workspace/rails/token2me/vendor/bundle/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_navbar.scss",
 		"/home/zod/Workspace/rails/token2me/vendor/bundle/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_theme.scss",
-		"/home/zod/Workspace/rails/token2me/app/views/layouts/application.html.slim",
-		"/home/zod/Workspace/rails/token2me/app/controllers/tokens_controller.rb",
 		"/home/zod/Workspace/rails/token2me/app/models/token.rb",
 		"/home/zod/Workspace/rails/token2me/app/models/user.rb",
-		"/home/zod/Workspace/rails/token2me/app/views/tokens/index.html.slim",
-		"/home/zod/Workspace/rails/token2me/app/presenters/user_presenter.rb",
 		"/home/zod/Workspace/rails/token2me/app/assets/stylesheets/tokens.scss",
 		"/home/zod/Workspace/rails/token2me/app/assets/stylesheets/scaffolds.scss",
-		"/home/zod/Workspace/rails/token2me/app/views/session/new.html.slim",
 		"/home/zod/Workspace/rails/token2me/app/controllers/application_controller.rb",
 		"/home/zod/Workspace/rails/token2me/db/schema.rb",
 		"/home/zod/Workspace/rails/token2me/test/controllers/users_controller_test.rb",
@@ -530,7 +448,6 @@
 		"/home/zod/Workspace/rails/token2me/vendor/bundle/gems/coderay-1.1.0/lib/coderay/tokens.rb",
 		"/home/zod/Workspace/scripts/musicCleaner.sh",
 		"/home/zod/Workspace/rails/token2me/Gemfile",
-		"/home/zod/Workspace/rails/token2me/app/views/tokens/_form.html.slim",
 		"/home/zod/Workspace/scripts/printarray.awk",
 		"/home/zod/Dropbox/techie-note/shell/quotes.md",
 		"/home/zod/.profile",
@@ -559,7 +476,6 @@
 		"/home/zod/Dropbox/techie-note/rails/model.md",
 		"/home/zod/Dropbox/techie-note/rails/routes.md",
 		"/home/zod/Dropbox/techie-note/rails/rails-deployement.md",
-		"/home/zod/Workspace/rails/token2me/app/presenters/token_presenter.rb",
 		"/home/zod/Workspace/rails/token2me/app/presenters/application_presenter.rb",
 		"/home/zod/Workspace/rails/token2me/app/assets/javascripts/tokens.coffee",
 		"/home/zod/Workspace/rails/token2me/token2me.sublime-project",
@@ -611,13 +527,7 @@
 		"/home/zod/Workspace/rails/dux-bellorum/app/views/users/edit.html.slim",
 		"/home/zod/Workspace/rails/dux-bellorum/app/views/users/show.html.slim",
 		"/home/zod/Workspace/rails/dux-bellorum/app/views/session/new.html.slim",
-		"/home/zod/Workspace/rails/snippets/with_simple_form2",
-		"/home/zod/Workspace/rails/dux-bellorum/vendor/bundle/ruby/2.2.0/gems/slim-3.0.3/doc/jp/include.md",
-		"/home/zod/Workspace/rails/dux-bellorum/config/initializers/simple_form.rb",
-		"/home/zod/Workspace/rails/dux-bellorum/app/views/layouts/application.html.slim",
-		"/home/zod/Workspace/rails/dux-bellorum/app/views/users/index.html.slim",
-		"/home/zod/Workspace/rails/dux-bellorum/app/assets/stylesheets/scaffolds.scss",
-		"/home/zod/Workspace/rails/dux-bellorum/vendor/bundle/ruby/2.2.0/gems/bootstrap-sass-3.3.4.1/assets/stylesheets/bootstrap/_scaffolding.scss"
+		"/home/zod/Workspace/rails/snippets/with_simple_form2"
 	],
 	"find":
 	{
@@ -651,6 +561,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"appendTo",
 			"Token",
 			"token",
 			"sm",
@@ -777,8 +688,7 @@
 			"/",
 			"\", \"",
 			"\",\"",
-			"/*\"",
-			"/*"
+			"/*\""
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -809,247 +719,24 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/layouts/application.html.slim",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 580,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								535,
-								535
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/layouts/_nav.html.slim",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1138,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1073,
-								1073
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/assets/stylesheets/_scaffolds.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1695,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								273,
-								273
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/views/session/new.html.slim",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 338,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								259,
-								259
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/users/edit.html.slim",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 116,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								116,
-								116
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/views/tokens/index.html.slim",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1438,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								403,
-								403
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 108.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/views/tokens/_token.html.slim",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 326,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								40,
-								40
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
 					"file": "app/controllers/tokens_controller.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1672,
+						"buffer_size": 1653,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								881,
-								881
+								859,
+								859
 							]
 						],
 						"settings":
@@ -1061,7 +748,7 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
+						"translation.x": -0.0,
 						"translation.y": 216.0,
 						"zoom_level": 1.0
 					},
@@ -1069,69 +756,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "app/views/tokens/index.js.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 115,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								115,
-								115
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Rails/JavaScript (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "app/views/tokens/new.js.erb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 67,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Rails/JavaScript (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
+					"buffer": 1,
 					"file": "app/views/tokens/_form.html.slim",
 					"semi_transient": false,
 					"settings":
@@ -1143,8 +768,8 @@
 						"selection":
 						[
 							[
-								15,
-								15
+								99,
+								99
 							]
 						],
 						"settings":
@@ -1158,63 +783,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 11,
-					"file": "app/presenters/token_presenter.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 957,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								658,
-								658
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 270.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
-					"file": "app/presenters/user_presenter.rb",
+					"buffer": 2,
+					"file": "/etc/fstab",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 209,
+						"buffer_size": 1673,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								205,
-								205
+								1029,
+								1029
 							]
 						],
 						"settings":
@@ -1222,47 +808,20 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 13,
-					"file": "app/assets/stylesheets/_tokens.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1542,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								514,
-								514
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 378.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 13,
+					"stack_index": 0,
 					"type": "text"
 				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],
