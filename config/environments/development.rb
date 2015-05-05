@@ -45,8 +45,8 @@ Rails.application.configure do
   :address              => "smtp.gmail.com",
   :port                 =>  587,
   :domain               => 'gmail.com',
-  :user_name            => 'tokentracker@gmail.com',
-  :password             =>  ENV['TOKEN_AGENT_PWD'],
+  :user_name            => 'tockentracker@gmail.com',
+  :password             => 'nucefrA8',
   :authentication       => 'plain',
   :enable_starttls_auto => true  }
 

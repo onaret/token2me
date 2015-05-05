@@ -36,10 +36,10 @@ class TokensController < ApplicationController
   def release_token
     Token.release_token params[:access_type]
     active_user = Token.active_user params[:access_type]
-    if active_user
-    #  TokenMailer.you_got_token(Token.active_user params[:access_type]).deliver_now
-    end
     redirect_to action: "index"
+    if active_user && active_user.email
+      #TokenMailer.you_got_token(Token.active_user params[:access_type]).deliver_now
+    end
   end
 
   def reset_token
