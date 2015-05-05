@@ -27,22 +27,17 @@ class TokensController < ApplicationController
   def create
     @token = Token.build_token(token_params, params[:access_type])
     @token.user = current_user
-    respond_to do |format|
-      if Token.active_team(params[:access_type]) != current_user.team && @token.save
-        format.html { redirect_to tokens_path(params[:access_type])}
-        format.json { render :show, status: :created, location: tokens_path(params[:access_type]) }
-      else
-        format.html { render :new }
-        format.json { render json: @token.errors, status: :unprocessable_entity }
-      end
+    if Token.team_has_no_token?(params[:access_type], current_user.team) 
+      @token.save
     end
+    redirect_to tokens_path(params[:access_type])
   end
 
   def release_token
     Token.release_token params[:access_type]
     active_user = Token.active_user params[:access_type]
     if active_user
-      TokenMailer.you_got_token(Token.active_user params[:access_type]).deliver_now
+    #  TokenMailer.you_got_token(Token.active_user params[:access_type]).deliver_now
     end
     redirect_to action: "index"
   end

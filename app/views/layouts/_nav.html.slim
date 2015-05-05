@@ -7,7 +7,9 @@ nav class="navbar navbar-default navbar-fixed-top"
           span class="icon-bar"
           span class="icon-bar"
           span class="icon-bar"
-      a class="navbar-brand" href="#" TokenTracker
+      a class="navbar-brand" href="#" 
+        span class='title1' |Token
+        span class='title2' Tracker|
       #navbar class="collapse navbar-collapse"
         ul class="nav navbar-nav"
           -if current_user && current_user.team
@@ -15,8 +17,7 @@ nav class="navbar navbar-default navbar-fixed-top"
               = link_to 'Server', tokens_path(access_type: :server)
             li class=(params[:access_type] == 'ui' ? "active" : "" )
               = link_to 'UI', tokens_path(access_type: :ui)
-            li 
-              -if params[:access_type]
-                = link_to 'Reset', reset_token_path(params[:access_type]),  data: {:confirm => 'Erase all token history?'}
+          li 
+            = link_to 'Contact', "http://jive"
     .col-md-1 class="col-md-offset-5 logo"
      // div = image_tag "ax-logo.png", alt: "Axway logo", class: "small"

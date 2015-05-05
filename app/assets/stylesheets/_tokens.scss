@@ -9,39 +9,17 @@
 	border-radius: $radius;
 }
 
-
-table { 
-	border-collapse: separate; 
-}
-
-
 .table 
 {
-  table-layout:fixed;
-}
 
-.table td {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
- // display: block;
-}
-/*
-.col-fx-1
-{
-	width:10%;
-}
+	td 	{
+		padding:1px !important;
+	}
 
-.col-fx-2
-{
-	width:15%;
+	td>div 	{
+		padding: 4px;
+	}
 }
-
-.col-fx-6
-{
-	width:50%;
-}
-*/
 /*
 .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td  {
 	border-top:  1px solid $blue-3;

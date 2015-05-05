@@ -16,7 +16,7 @@ class SessionController < ApplicationController
     host = 'ldap.axway.int'
     port =  389
     path = "ou=Employees,dc=axway,dc=int"
-    ident_full, psw = "#{params[:ident]}@axway.com", params[:password]
+    ident_full = "#{params[:ident]}@axway.com"
 
     ldap = Net::LDAP.new    :host => host,
           :port => "389", 
@@ -24,43 +24,38 @@ class SessionController < ApplicationController
           :auth => {
             :method => :simple,
             :username => ident_full,
-            :password => psw 
+            :password => params[:password] 
           }
 
-    result_attrs = ["sAMAccountName", "displayname", "mail"]
+    result_attrs = ["sAMAccountName", "displayname", "mail", "team"]
 
     # Build filter
     search_filter = Net::LDAP::Filter.eq("sAMAccountName", params[:ident])
 
     # Execute search     
-    ldap.search(:filter => search_filter, :attributes => result_attrs, :return_result => false) do |item| 
+#   ldap.search(:filter => search_filter, :attributes => result_attrs, :return_result => false) do |item| 
+      # notice = "Connected as #{username}: #{item.displayName.first} (#{item.mail.first})."
 
-=begin
       item = {
         sAMAccountName: {first: params[:ident]}, 
         displayName: {first: params[:ident]}, 
         mail: {first: ident_full}
       }
-=end
 
-      # notice = "Connected as #{username}: #{item.displayName.first} (#{item.mail.first})."
-      
-      #username = item[:sAMAccountName][:first]
-      
-      username = item.sAMAccountName.first 
+      username = item[:sAMAccountName][:first]
+      #username = item.sAMAccountName.first 
+      #NB : I think user.ident is initialized here if the user is new
       user = User.where(ident: username).first_or_initialize
-      
-      unless user.id
-        #user.name = item[:displayName][:first]
-        #user.email = item[:mail][:first]
-        user.name = item.displayName.first
-        user.email = item.mail.first
-        user.save
-      end
-      
+      user.name = item[:displayName][:first]
+      #user.name = item.displayName.first
+      user.email = item[:mail][:first]
+      #user.email = item.mail.first
+      #user.team item.team.first.to_sym
+      user.save
       session[:user_id] = user.id
-   end
-  redirect_to root_path
+      redirect_to root_path
+
+   #end
 
   end
 

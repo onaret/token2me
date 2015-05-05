@@ -112,7 +112,14 @@ a {
   text-align: right;
 }
 
-.small {
-  width: 64;
-  height: 48;
+.icon {
+  width: 32;
+  height: 32;
+}
+.title1{
+  color:$green-1;
+}
+
+.title2{
+  color:$blue-1;
 }

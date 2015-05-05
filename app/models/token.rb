@@ -8,8 +8,9 @@ class Token < ActiveRecord::Base
 
   scope :of_access_type, -> (access_type) {where(access_type:  Token.access_types[access_type])}
   scope :of_status, -> (status) {where(status: Token.statuses[status])}
+  scope :with_engaged_token, -> {where("status = ? OR status = ?", 1,2 ) }
+#  scope :with_engaged_token, -> (status) {where(status: [:active, :queued])}
 # scope :active_token_for, -> (access_type) {find_by(access_type: Token.access_types[access_type], status: Token.statuses[:active])}
-
 # scope :active_token_for, -> (access_type) {find_by(access_type: Token.access_types[access_type], status: Token.statuses[:active])}
 # scope :active_token_for, -> (access_type) {where(access_type: Token.access_types[access_type], status: Token.statuses[:active]).first}
 
@@ -54,7 +55,7 @@ class Token < ActiveRecord::Base
   end
 
   def self.reset_token(access_type)
-    of_access_type(access_type).destroy_all
+    of_access_type(access_type).of_status(:archived).destroy_all
   end
 
   def self.get_next_status(access_type)
@@ -77,6 +78,12 @@ class Token < ActiveRecord::Base
   def self.last_token(access_type)
     of_access_type(access_type).last
   end
+
+  def self.team_has_no_token?(access_type, team)
+    of_access_type(access_type).with_engaged_token.joins(:user).merge(User.where(team: User.teams[team])).empty?
+    #of_access_type(access_type).with_engaged_token([:queued, :active]).joins(:user).merge(User.where(team: User.teams[team])).empty?
+  end
+
 
   def self.team_is_in_queued?(access_type, team)
     !of_access_type(access_type).of_status(:queued).joins(:user).merge(User.where(team: User.teams[team])).empty?

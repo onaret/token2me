@@ -1,13 +1,13 @@
 .row
-  h1 Token status
+	h1 Token status #{link_to image_tag("clean-token.png", border: 0, class: 'icon'), reset_token_path(params[:access_type]), data: {confirm: 'Erase all archived token entries?'}}
 
-  #token-list
-    ==render 'tokens/tokens_list'
+	#token-list
+	==render 'tokens/tokens_list'
 
-  br
+	br
 
 .row
-  #token-new
+	#token-new
 
-  #token-claim
-    ==render 'tokens/token_claim'
+	#token-claim
+	==render 'tokens/token_claim'
