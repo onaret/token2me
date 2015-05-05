@@ -14,10 +14,10 @@ nav class="navbar navbar-default navbar-fixed-top"
         ul class="nav navbar-nav"
           -if current_user && current_user.team
             li class=(params[:access_type] == 'server' ? "active" : "" )
-              = link_to 'Server', tokens_path(access_type: :server)
+              = link_to 'Server', tokens_path(access_type: :server), class: 'bold' 
             li class=(params[:access_type] == 'ui' ? "active" : "" )
-              = link_to 'UI', tokens_path(access_type: :ui)
+              = link_to 'UI', tokens_path(access_type: :ui), class: 'bold'
           li 
-            = link_to 'Contact', "http://jive"
+            = link_to 'Contact', "http://jive", class: 'bold'
     .col-md-1 class="col-md-offset-5 logo"
      // div = image_tag "ax-logo.png", alt: "Axway logo", class: "small"
