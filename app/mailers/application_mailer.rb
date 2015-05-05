@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "agent@tokentracker.axway.com"
+  default from: "tockentracker@gmail.com"
 #  layout 'mailer'
 end

@@ -5,7 +5,7 @@ class UserPresenter < ApplicationPresenter
   end
 
   def name(tag)
-      content_tag(tag, user.name.capitalize)
+      content_tag(tag, user.name)
   end
 
 end
