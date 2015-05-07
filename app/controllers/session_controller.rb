@@ -43,6 +43,10 @@ class SessionController < ApplicationController
       user.save
       session[:user_id] = user.id
     end
+    unless session[:user_id]
+      flash[:alert] = "Error identifying to LDAP"
+    end
+
     redirect_to root_path
 
   end

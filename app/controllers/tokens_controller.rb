@@ -38,7 +38,11 @@ class TokensController < ApplicationController
     active_user = Token.active_user params[:access_type]
     redirect_to action: "index"
     if active_user && active_user.email
-      TokenMailer.you_got_token(Token.active_user params[:access_type]).deliver_now
+      begin
+        TokenMailer.you_got_token(Token.active_user params[:access_type]).deliver_later
+      rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
+        notice[:alert]="issue delivering mail to next user"      
+      end
     end
   end
 
