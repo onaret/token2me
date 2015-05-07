@@ -33,29 +33,17 @@ class SessionController < ApplicationController
     search_filter = Net::LDAP::Filter.eq("sAMAccountName", params[:ident])
 
     # Execute search     
-#   ldap.search(:filter => search_filter, :attributes => result_attrs, :return_result => false) do |item| 
-      # notice = "Connected as #{username}: #{item.displayName.first} (#{item.mail.first})."
-
-      item = {
-        sAMAccountName: {first: params[:ident]}, 
-        displayName: {first: params[:ident]}, 
-        mail: {first: ident_full}
-      }
-
-      username = item[:sAMAccountName][:first]
-      #username = item.sAMAccountName.first 
-      #NB : I think user.ident is initialized here if the user is new
+    ldap.search(:filter => search_filter, :attributes => result_attrs, :return_result => false) do |item| 
+      #notice = "Connected as #{username}: #{item.displayName.first} (#{item.mail.first})."
+      username = item.sAMAccountName.first 
       user = User.where(ident: username).first_or_initialize
-      user.name = item[:displayName][:first]
-      #user.name = item.displayName.first
-      user.email = item[:mail][:first]
-      #user.email = item.mail.first
-      #user.team item.team.first.to_sym
+      user.name = item.displayName.first
+      user.email = item.mail.first
+      #user.team = item.team.first.to_sym
       user.save
       session[:user_id] = user.id
-      redirect_to root_path
-
-   #end
+    end
+    redirect_to root_path
 
   end
 

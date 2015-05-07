@@ -38,7 +38,7 @@ class TokensController < ApplicationController
     active_user = Token.active_user params[:access_type]
     redirect_to action: "index"
     if active_user && active_user.email
-      #TokenMailer.you_got_token(Token.active_user params[:access_type]).deliver_now
+      TokenMailer.you_got_token(Token.active_user params[:access_type]).deliver_now
     end
   end
 

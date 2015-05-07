@@ -12,7 +12,7 @@ class TokensControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
-    get :new, access_type: 'server'
+    get :new, access_type: 'server', :format => 'js'
     assert_response :success
   end
 
