@@ -10,14 +10,11 @@ html
     link rel="icon" href="favicon.ico"
 
   body
-    == render "layouts/nav"
     .container
       .row
-        .col-sm-6
-          == render "layouts/notice"
-        .col-sm-6 
-          == render "layouts/userstatus"
-
+        == render "layouts/nav"
+      .row class="col-md-6"
+        == render "layouts/notice"
       
     .container
       == yield
